@@ -24,41 +24,45 @@ For information about the SIF file format, please see at the end of this readme 
 Ensure that `kgml2sif` is executable: `chmod ugo+x kgml2sif`.
 
 Positional arguments:
-    * `kgmlfile`: a KGML-encoded KEGG pathway
+
+* `kgmlfile`: a KGML-encoded KEGG pathway
 
 Optional arguments:
-    * `-s/--symbol <file>`: a conversion table for translating KEGG gene IDs to gene symbols (see the `kegg2symbol.csv` file provided with kgml2sif in the `conv` folder)
-    * `-c/--compound <file>`: a conversion table for translating compound IDs to compound names (see the `compound2name.csv` file provided with kgml2sif in the `conv` folder)
-    * `-l/--license`: print the [Apache License Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) under which kgml2sif is
-    * `-h/--help`: print help
+
+* `-s/--symbol <file>`: a conversion table for translating KEGG gene IDs to gene symbols (see the `kegg2symbol.csv` file provided with kgml2sif in the `conv` folder)
+* `-c/--compound <file>`: a conversion table for translating compound IDs to compound names (see the `compound2name.csv` file provided with kgml2sif in the `conv` folder)
+* `-l/--license`: print the [Apache License Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) under which kgml2sif is
+* `-h/--help`: print help
 
 Currently:
-    * kgml2sif is more suitable for processing [KEGG signaling pathways](https://www.genome.jp/kegg/pathway.html#environmental). However, extending it to better handle other types of KEGG pathways (such as [metabolic ones](https://www.genome.jp/kegg/pathway.html#metabolism)) is envisioned.
-    * the following node types are considered:
-        * gene
-        * compound
-        * group (in KGML, groups are complexes)
-    * the following relation types are considered (in KGML, relations are edges):
-        * PPrel (protein-protein)
-        * GErel (gene expression)
-        * PCrel (protein-compound)
-        * ECrel (enzyme-compound)
+
+* kgml2sif is more suitable for processing [KEGG signaling pathways](https://www.genome.jp/kegg/pathway.html#environmental). However, extending it to better handle other types of KEGG pathways (such as [metabolic ones](https://www.genome.jp/kegg/pathway.html#metabolism)) is envisioned.
+* the following node types are considered:
+    * gene
+    * compound
+    * group (in KGML, groups are complexes)
+* the following relation types are considered (in KGML, relations are edges):
+    * PPrel (protein-protein)
+    * GErel (gene expression)
+    * PCrel (protein-compound)
+    * ECrel (enzyme-compound)
 
 In the output SIF file:
-    * relation names (i.e. edge names) are suffixed with their corresponding type, ex:
-        * `phosphorylation_PPrel`
-        * `repression_GErel`
-    * if necessary, edges having multiple types are split in order to obtain one type per edge (__warning:__ it can create multi-edges)
-    * the non-KGML `membership_CPXrel` relation is added to indicate when a node is component of a complex (CPXrel stands for relations involving complexes, an added non-KGML relation type)
-    * complexes are named as follows: `cp1::cp2::cp3` where `cp1`, `cp2` and `cp3` are the complex components. By the way, in this example of a
-3-components complex, the following edges would be added as explain above:
-        * `cp1    membership_CPXrel    cp1::cp2::cp3`
-        * `cp2    membership_CPXrel    cp1::cp2::cp3`
-        * `cp3    membership_CPXrel    cp1::cp2::cp3`
+
+* relation names (i.e. edge names) are suffixed with their corresponding type, ex:
+    * `phosphorylation_PPrel`
+    * `repression_GErel`
+* if necessary, edges having multiple types are split in order to obtain one type per edge (__warning:__ it can create multi-edges)
+* the non-KGML `membership_CPXrel` relation is added to indicate when a node is component of a complex (CPXrel stands for relations involving complexes, an added non-KGML relation type)
+* complexes are named as follows: `cp1::cp2::cp3` where `cp1`, `cp2` and `cp3` are the complex components. By the way, in this example of a 3-components complex, the following edges would be added as explain above:
+    * `cp1    membership_CPXrel    cp1::cp2::cp3`
+    * `cp2    membership_CPXrel    cp1::cp2::cp3`
+    * `cp3    membership_CPXrel    cp1::cp2::cp3`
 
 If `-s/--symbol` or `-c/--compound` are used:
-    * the conversion tables must be 2-columns CSV files with semicolon as field separator (see the `conv` folder)
-    * unmatched IDs are left unchanged in the output SIF file
+
+* the conversion tables must be 2-columns CSV files with semicolon as field separator (see the `conv` folder)
+* unmatched IDs are left unchanged in the output SIF file
 
 ### Cautions
 
