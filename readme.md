@@ -2,7 +2,7 @@
 
 Copyright 2019 [Arnaud Poret](https://github.com/arnaudporet)
 
-This work is licensed under the [Apache License Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) (the "License"). You may not use this work except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
+This work is licensed under the [Apache License Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) (the "License"). You may not use this work except in compliance with the License. You may obtain a copy of the License at https://www.apache.org/licenses/LICENSE-2.0.
 
 ## kgml2sif
 
@@ -31,7 +31,7 @@ Optional arguments:
 
 * `-s/--symbol <file>`: a conversion table for translating KEGG gene IDs to gene symbols (see the `kegg2symbol.csv` file provided with kgml2sif in the `conv` folder)
 * `-c/--compound <file>`: a conversion table for translating compound IDs to compound names (see the `compound2name.csv` file provided with kgml2sif in the `conv` folder)
-* `-l/--license`: print the [Apache License Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) under which kgml2sif is
+* `-l/--license`: print the [Apache License Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) under which kgml2sif is
 * `-h/--help`: print help
 
 Currently:
@@ -53,6 +53,7 @@ In the output SIF file:
     * `phosphorylation_PPrel`
     * `repression_GErel`
 * if necessary, edges having multiple types are split in order to obtain one type per edge (__warning:__ it can create multi-edges)
+* multi-edges, if any, are left inside the output SIF file and kgml2sif warns about the presence of such edges
 * the non-KGML `membership_CPXrel` relation is added to indicate when a node is component of a complex (CPXrel stands for relations involving complexes, an added non-KGML relation type)
 * complexes are named as follows: `cp1::cp2::cp3` where `cp1`, `cp2` and `cp3` are the complex components. By the way, in this example of a 3-components complex, the following edges would be added as explain above:
     * `cp1    membership_CPXrel    cp1::cp2::cp3`
@@ -90,7 +91,7 @@ Note that kgml2sif raises warnings when processing `Insulin_signaling_pathway.xm
 PCrel: 61 --> 17: missing name, skipping
 ```
 
-This warning indicates that a PCrel edge linking the node 61 to the node 17 (identified by their IDs in the KGML file) has no name (i.e. no information about the modeled biological interaction) and is therefore skipped by kgml2sif.
+This warning indicates that a PCrel edge linking the node 61 to the node 17 (identified by their IDs inside the KGML file) has no name (i.e. no information about the modeled biological interaction) and is therefore skipped by kgml2sif.
 
 ### p53 signaling pathway:
 
@@ -105,15 +106,15 @@ TP53    activation_PPrel    MDM2
 TP53    expression_GErel    MDM2
 ```
 
-When processing `p53_signaling_pathway.xml`, kgml2sif identifies two edges linking TP53 to MDM2. Theses two edges are therefore multi-edges. However, they are not considered invalid by kgml2sif since it can not determine if one of them is wrong, or which is the most relevant, or if they are both meaningful (kgml2sif is an algorithm, not a human expert able to perform such judgments).
+When processing `p53_signaling_pathway.xml`, kgml2sif identifies two edges linking TP53 to MDM2. Theses two edges are therefore multi-edges. However, they are not considered invalid by kgml2sif since it can not determine if one of them is wrong, or which is the most relevant, or if they are both meaningful (kgml2sif is not a human expert able to perform such judgments).
 
 Consequently, because these edges are not considered invalid by kgml2sif, they are left inside the output SIF file and the user is warned about the presence of such edges.
 
 ## The KGML file format
 
-KGML stands for KEGG Markup Language. It is an [XML](https://www.w3.org/XML/) representation of KEGG pathways and is a file format in which KEGG pathways can be downloaded, either from [KEGG Pathway](https://www.genome.jp/kegg/pathway.html) or using the [KEGG API](https://www.kegg.jp/kegg/rest/keggapi.html).
+KGML stands for KEGG Markup Language. It is an [XML](https://www.w3.org/XML/) representation of [KEGG pathways](https://www.genome.jp/kegg/pathway.html) and is a file format in which KEGG pathways can be downloaded, either from KEGG Pathway itself or using the [KEGG API](https://www.kegg.jp/kegg/rest/keggapi.html).
 
-For full explanation of the KGML file format, please see https://www.kegg.jp/kegg/xml/docs/.
+For full explanations about the the KGML file format, please see https://www.kegg.jp/kegg/xml/docs/.
 
 ## The SIF file format
 
@@ -123,7 +124,7 @@ In a SIF file encoding a network, each line encodes an edge as follows:
 source \t interaction \t target
 ```
 
-Note that the field separator is the tabulation `\t`: the SIF file format is the tab-separated values format (TSV) with exactly 3 columns.
+Note that the field separator is the tabulation: the SIF file format is the tab-separated values format TSV with exactly 3 columns.
 
 For example, the edge representing the _activation_ of _RAF1_ by _HRAS_ is a line of a SIF file encoded as follows:
 
