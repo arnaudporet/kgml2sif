@@ -1092,7 +1092,7 @@ cpd:C01236;D-Glucono-1,5-lactone 6-phosphate
 cpd:C01239;N-Acetyl-beta-D-glucosaminylamine
 cpd:C01240;2',3'-Cyclic nucleotide
 cpd:C01241;Phosphatidyl-N-methylethanolamine
-cpd:C01242;S-Aminomethyldihydrolipoylprotein
+cpd:C01242;[Protein]-S8-aminomethyldihydrolipoyllysine
 cpd:C01243;1D-myo-Inositol 1,3,4-trisphosphate
 cpd:C01244;3,5-Diiodo-4-hydroxyphenylpyruvate
 cpd:C01245;D-myo-Inositol 1,4,5-trisphosphate
@@ -1706,7 +1706,7 @@ cpd:C02064;Prostanoic acid
 cpd:C02065;Protein alanine
 cpd:C02066;Pseudotropine
 cpd:C02067;Pseudouridine
-cpd:C02069;Putidaredoxin
+cpd:C02069;Reduced putidaredoxin
 cpd:C02072;RNA (poly(C))
 cpd:C02073;RNA(circular)
 cpd:C02074;Raucaffricine
@@ -12929,11 +12929,11 @@ cpd:C16232;6,7,4'-Trihydroxyflavanone
 cpd:C16233;2,6,7,4'-Tetrahydroxyisoflavanone
 cpd:C16234;o-Nitrobenzoate
 cpd:C16235;o-Hydroxylaminobenzoate
-cpd:C16236;Protein N6-(octanoyl)lysine
+cpd:C16236;[Protein]-N6-(octanoyl)-L-lysine
 cpd:C16237;Protein N6-(lipoyl)lysine
 cpd:C16238;Lipoyl-AMP
 cpd:C16239;Lipoyl-[acp]
-cpd:C16240;Apoprotein
+cpd:C16240;[Lipoyl-carrier protein]-L-lysine
 cpd:C16241;(R)-Lipoate
 cpd:C16242;Cobalt-precorrin 5A
 cpd:C16243;Cobalt-precorrin 5B
@@ -13504,7 +13504,7 @@ cpd:C16828;Caffeoquinone
 cpd:C16829;gamma-Humulene
 cpd:C16830;D-Aldonolactone
 cpd:C16831;L-2-Methyltryptophan
-cpd:C16832;Protein N6-(dihydrolipoyl)lysine
+cpd:C16832;[Protein]-N6-[(R)-dihydrolipoyl]-L-lysine
 cpd:C16833;beta-Phenylalanoyl-CoA
 cpd:C16834;1-Pentanol
 cpd:C16835;Succinic aldehyde
@@ -18569,6 +18569,30 @@ cpd:C22133;Holo-[(hydroxy)phthioceranic acid synthase]
 cpd:C22134;Stearoyl-[(hydroxy)phthioceranic acid synthase]
 cpd:C22135;(Palmitoyl)adenylate
 cpd:C22136;Zymosterone
+cpd:C22137;4-Chloro-L-lysine
+cpd:C22138;L-Propargylglycine
+cpd:C22139;gamma-L-Glutamyl-L-propargylglycine
+cpd:C22140;L-gamma-Glutamyl-(3R)-L-beta-ethynylserine
+cpd:C22141;L-beta-Ethynylserine
+cpd:C22142;Cyclo(L-Trp-L-Phe)
+cpd:C22143;N-Methyl-cyclo(L-Trp-L-Phe)
+cpd:C22144;(-)-Ditryptophenaline
+cpd:C22145;Fumiquinazoline F
+cpd:C22146;Fumiquinazoline F-indoline-2',3'-diol
+cpd:C22147;Fumiquinazoline A
+cpd:C22148;Fumiquinazoline C
+cpd:C22149;Fumiquinazoline D
+cpd:C22150;Reduced [2Fe-2S] ferredoxin
+cpd:C22151;Oxidized [2Fe-2S] ferredoxin
+cpd:C22152;Bergamottin
+cpd:C22153;Epoxybergamottin
+cpd:C22154;[Fe-S] cluster scaffold protein carrying a [4Fe-4S]2+ cluster
+cpd:C22155;[Fe-S] cluster scaffold protein
+cpd:C22156;6',7'-Dihydroxybergamottin
+cpd:C22157;Glycine cleavage system H
+cpd:C22158;Lipoyl-carrier protein E2
+cpd:C22159;[Glycine cleavage system H]-N6-octanoyl-L-lysine
+cpd:C22160;[Lipoyl-carrier protein E2]-N6-octanoyl-L-lysine
 gl:G00001;N-Acetyl-D-glucosaminyldiphosphodolichol
 gl:G00002;N,N'-Chitobiosyldiphosphodolichol
 gl:G00003;(GlcNAc)2 (Man)1 (PP-Dol)1
@@ -40660,3 +40684,15 @@ dr:D11615;Aspirin and dipyridamole
 dr:D11616;Aspirin and omeprazole
 dr:D11617;Eletriptan hydrobromide monohydrate
 dr:D11618;Moxifloxacin hydrochloride monohydrate
+dr:D11619;Desvenlafaxine succinate anhydrous
+dr:D11620;Naloxone hydrochloride dihydrate
+dr:D11621;Imipenem, cilastatin and relebactam
+dr:D11622;Amphetamine aspartate monohydrate
+dr:D11623;Dextroamphetamine saccharate
+dr:D11624;Amphetamine aspartate, amphetamine sulfate, dextroamphetamine saccharate and dextroamphetamine sulfate
+dr:D11625;Hydroxyamphetamine hydrobromide and tropicamide
+dr:D11626;Guanidine hydrochloride
+dr:D11627;Acyclovir and hydrochortisone
+dr:D11628;Benzhydrocodone and acetaminophen
+dr:D11629;Bremelanotide acetate
+dr:D11630;Aminophylline dihydrate
