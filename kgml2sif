@@ -45,8 +45,8 @@ In the output SIF file, the non-KGML \"membership_CPXrel\" relation is added to
 indicate when a node is component of a complex. CPXrel stands for relations
 involving complexes, an added non-KGML relation type.
 
-In the output SIF file, complexes are named as follows: cp1::cp2::cp3 where cp1,
-cp2 and cp3 are the complex components. By the way, in this example of a
+In the output SIF file, complexes are named as follows: cp1::cp2::cp3, where
+cp1, cp2 and cp3 are the complex components. By the way, in this example of a
 3-components complex, the following edges would be added as explain above:
     * cp1    membership_CPXrel    cp1::cp2::cp3
     * cp2    membership_CPXrel    cp1::cp2::cp3
@@ -57,243 +57,222 @@ If -s/--symbol or -c/--compound are used:
       separator
     * unmatched IDs are left unchanged in the output SIF file
 
-For a full explanation of the KGML file format see
-https://www.kegg.jp/kegg/xml/docs/.
+Full explanation of the KGML file format at https://www.kegg.jp/kegg/xml/docs/.
 
-For explanations about the SIF file format see the readme file of kgml2sif.
+For explanations about the SIF file format, see the readme file of kgml2sif.
 """,
 formatter_class=argparse.RawDescriptionHelpFormatter
 )
-parser.add_argument("kgmlfile",type=str,help="a KGML-encoded KEGG pathway",nargs="+")
-parser.add_argument("-s","--symbol",type=str,metavar="FILE",help="a conversion table for translating KEGG gene IDs to gene symbols (see the kegg2symbol.csv file provided with kgml2sif)")
-parser.add_argument("-c","--compound",type=str,metavar="FILE",help="a conversion table for translating compound IDs to compound names (see the compound2name.csv file provided with kgml2sif)")
-parser.add_argument("-l","--license",help="print the Apache License Version 2.0 under which kgml2sif is",action="store_true")
+parser.add_argument("kgmlfile",type=str,metavar="<kgmlfile>",help="a KGML-encoded KEGG pathway",nargs="+")
+parser.add_argument("-s","--symbol",type=str,metavar="<file>",help="a conversion table for translating KEGG gene IDs to gene symbols (see the file kegg2symbol.csv provided with kgml2sif)")
+parser.add_argument("-c","--compound",type=str,metavar="<file>",help="a conversion table for translating compound IDs to compound names (see the file compound2name.csv provided with kgml2sif)")
 args=parser.parse_args()
-if args.license:
-    print(
-    """
-
-    Copyright 2019 Arnaud Poret
-
-    Licensed under the Apache License, Version 2.0 (the "License").
-    You may not use this file except in compliance with the License.
-    You may obtain a copy of the License at:
-    https://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software distributed
-    under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-    CONDITIONS OF ANY KIND, either express or implied. See the License for the
-    specific language governing permissions and limitations under the License.
-
-    """
-    )
-else:
-    import os.path
-    okSymb=True
-    okCompound=True
-    kegg2symbol={}
-    compound2name={}
-    if args.symbol!=None:
-        warns=[]
-        for line in open(args.symbol,"rt").read().splitlines():
-            if line.count(";")!=1:
-                warns.append(line+": must be a 2-columns CSV with semicolon as field separator, skipping")
+import os.path
+okSymb=True
+okCompound=True
+kegg2symbol={}
+compound2name={}
+if args.symbol!=None:
+    warns=[]
+    for line in open(args.symbol,"rt").read().splitlines():
+        if line.count(";")!=1:
+            warns.append(line+": must be a 2-columns CSV with semicolon as field separator, skipping")
+        else:
+            line=line.split(";")
+            if line[0] in kegg2symbol.keys():
+                warns.append(";".join(line)+": duplicated KEGG gene ID, skipping")
+            elif line[1]=="":
+                warns.append(";".join(line)+": empty gene symbol, skipping")
             else:
-                line=line.split(";")
-                if line[0] in kegg2symbol.keys():
-                    warns.append(";".join(line)+": duplicated KEGG gene ID, skipping")
-                elif line[1]=="":
-                    warns.append(";".join(line)+": empty gene symbol, skipping")
-                else:
-                    kegg2symbol[line[0]]=line[1]
-        if len(warns)!=0:
-            warnFile=list(os.path.splitext(args.symbol))
-            warnFile[1]="-warnings.txt"
-            warnFile="".join(warnFile)
-            print("Warning: kgml2sif: "+args.symbol+": see "+warnFile)
-            open(warnFile,"w").write("\n".join(warns)+"\n")
-        if len(kegg2symbol.keys())==0:
-            print("Error: kgml2sif: "+args.symbol+": empty after reading")
-            okSymb=False
-    if args.compound!=None:
-        warns=[]
-        for line in open(args.compound,"rt").read().splitlines():
-            if line.count(";")!=1:
-                warns.append(line+": must be a 2-columns CSV with semicolon as field separator, skipping")
+                kegg2symbol[line[0]]=line[1]
+    if len(warns)!=0:
+        warnFile=list(os.path.splitext(args.symbol))
+        warnFile[1]="-warnings.txt"
+        warnFile="".join(warnFile)
+        print("Warning: kgml2sif: "+args.symbol+": see "+warnFile)
+        open(warnFile,"w").write("\n".join(warns)+"\n")
+    if len(kegg2symbol.keys())==0:
+        print("Error: kgml2sif: "+args.symbol+": empty after reading")
+        okSymb=False
+if args.compound!=None:
+    warns=[]
+    for line in open(args.compound,"rt").read().splitlines():
+        if line.count(";")!=1:
+            warns.append(line+": must be a 2-columns CSV with semicolon as field separator, skipping")
+        else:
+            line=line.split(";")
+            if line[0] in compound2name.keys():
+                warns.append(";".join(line)+": duplicated compound ID, skipping")
+            elif line[1]=="":
+                warns.append(";".join(line)+": empty compound name, skipping")
             else:
-                line=line.split(";")
-                if line[0] in compound2name.keys():
-                    warns.append(";".join(line)+": duplicated compound ID, skipping")
-                elif line[1]=="":
-                    warns.append(";".join(line)+": empty compound name, skipping")
+                compound2name[line[0]]=line[1]
+    if len(warns)!=0:
+        warnFile=list(os.path.splitext(args.compound))
+        warnFile[1]="-warnings.txt"
+        warnFile="".join(warnFile)
+        print("Warning: kgml2sif: "+args.compound+": see "+warnFile)
+        open(warnFile,"w").write("\n".join(warns)+"\n")
+    if len(compound2name.keys())==0:
+        print("Error: kgml2sif: "+args.compound+": empty after reading")
+        okCompound=False
+if okSymb and okCompound:
+    import copy
+    import xml.etree.ElementTree
+    nodeTypes=["gene","compound","group"]
+    relTypes=["PPrel","GErel","PCrel","ECrel"]
+    for kgmlFile in args.kgmlfile:
+        warns=[]
+        nodes={}
+        groups={}
+        sif=[]
+        edges={}
+        multiEdges=[]
+        pathway=xml.etree.ElementTree.fromstring(open(kgmlFile,"rt").read())
+        for entry in pathway.findall("entry"):
+            type_=entry.get("type")
+            id_=entry.get("id")
+            name=entry.get("name")
+            if type_ in nodeTypes:
+                if id_==None:
+                    warns.append(type_+" with no ID, skipping")
+                elif (id_ in nodes.keys()) or (id_ in groups.keys()):
+                    warns.append(type_+" "+id_+": duplicated ID, skipping")
+                elif (name==None) or (name==""):
+                    warns.append(type_+" "+id_+": missing name, skipping")
+                elif type_=="group":
+                    groups[id_]=copy.deepcopy(entry)
                 else:
-                    compound2name[line[0]]=line[1]
-        if len(warns)!=0:
-            warnFile=list(os.path.splitext(args.compound))
-            warnFile[1]="-warnings.txt"
-            warnFile="".join(warnFile)
-            print("Warning: kgml2sif: "+args.compound+": see "+warnFile)
-            open(warnFile,"w").write("\n".join(warns)+"\n")
-        if len(compound2name.keys())==0:
-            print("Error: kgml2sif: "+args.compound+": empty after reading")
-            okCompound=False
-    if okSymb and okCompound:
-        import copy
-        import xml.etree.ElementTree
-        nodeTypes=["gene","compound","group"]
-        relTypes=["PPrel","GErel","PCrel","ECrel"]
-        for kgmlFile in args.kgmlfile:
-            warns=[]
-            nodes={}
-            groups={}
-            sif=[]
-            edges={}
-            multiEdges=[]
-            pathway=xml.etree.ElementTree.fromstring(open(kgmlFile,"rt").read())
-            for entry in pathway.findall("entry"):
-                type_=entry.get("type")
-                id_=entry.get("id")
-                name=entry.get("name")
-                if type_ in nodeTypes:
-                    if id_==None:
-                        warns.append(type_+" with no ID, skipping")
-                    elif (id_ in nodes.keys()) or (id_ in groups.keys()):
-                        warns.append(type_+" "+id_+": duplicated ID, skipping")
-                    elif (name==None) or (name==""):
-                        warns.append(type_+" "+id_+": missing name, skipping")
-                    elif type_=="group":
-                        groups[id_]=copy.deepcopy(entry)
-                    else:
-                        nodes[id_]=name.split(" ")
-            if (args.symbol!=None) or (args.compound!=None):
-                for id_ in nodes.keys():
-                    for i in range(len(nodes[id_])):
-                        symbol=[]
-                        if (args.symbol!=None) and (nodes[id_][i] in kegg2symbol.keys()):
-                            symbol.append(kegg2symbol[nodes[id_][i]])
-                        if (args.compound!=None) and (nodes[id_][i] in compound2name.keys()):
-                            symbol.append(compound2name[nodes[id_][i]])
-                        if len(symbol)==1:
-                            nodes[id_][i]=symbol[0]
-                        elif len(symbol)>1:
-                            warns.append("node "+id_+": "+nodes[id_][i]+": has correspondences in both kegg2symbol and compound2name, skipping")
+                    nodes[id_]=name.split(" ")
+        if (args.symbol!=None) or (args.compound!=None):
             for id_ in nodes.keys():
-                noDups=[]
-                for name in nodes[id_]:
-                    if name not in noDups:
-                        noDups.append(name)
-                nodes[id_]=copy.deepcopy(noDups)
-            for id_ in groups.keys():
-                componentIDs=[]
-                inNodes=[]
-                for component in groups[id_].findall("component"):
-                    componentIDs.append(component.get("id"))
-                for componentID in componentIDs:
-                    inNodes.append(componentID in nodes.keys())
-                if len(componentIDs)==0:
-                    warns.append("group "+id_+": empty, skipping")
-                elif len(componentIDs)==1:
-                    warns.append("group "+id_+": only one component, skipping")
-                elif False in inNodes:
-                    warns.append("group "+id_+": contains invalid (or unconsidered) nodes, skipping")
-                else:
-                    members=[]
-                    cpxs1=[]
-                    cpxs2=[]
-                    nodes[id_]=[]
-                    for componentID in componentIDs:
-                        members.append(copy.deepcopy(nodes[componentID]))
-                    n=len(members)
-                    m=1
-                    for i in range(n):
-                        m*=len(members[i])
-                    for i in range(n):
-                        cpxs1.append([])
-                        p=len(members[i])
-                        q=1
-                        for j in range(i+1,n):
-                            q*=len(members[j])
-                        for j in range(m):
-                            cpxs1[i].append(members[i][(j//q)%p])
-                    for i in range(m):
-                        cpxs2.append([])
-                        for j in range(n):
-                            cpxs2[i].append(cpxs1[j][i])
-                        cpxs2[i]=sorted(cpxs2[i])
-                    for cpx in sorted(cpxs2):
-                        name="::".join(cpx)
-                        if name not in nodes[id_]:
-                            nodes[id_].append(name)
-                        for node in cpx:
-                            sif.append([node,["membership_CPXrel"],name])
-            for relation in pathway.findall("relation"):
-                type_=relation.get("type")
-                if type_ in relTypes:
-                    entry1=relation.get("entry1")
-                    entry2=relation.get("entry2")
-                    name=[]
-                    for subtype in relation.findall("subtype"):
-                        name.append(subtype.get("name"))
-                    if entry1 not in nodes.keys():
-                        warns.append(type_+": "+entry1+" --> "+entry2+": invalid (or unconsidered) source node, skipping")
-                    elif entry2 not in nodes.keys():
-                        warns.append(type_+": "+entry1+" --> "+entry2+": invalid (or unconsidered) target node, skipping")
-                    elif len(name)==0:
-                        warns.append(type_+": "+entry1+" --> "+entry2+": missing name, skipping")
-                    elif (None in name) or ("" in name):
-                        warns.append(type_+": "+entry1+" --> "+entry2+": incomplete name, skipping")
-                    else:
-                        for i in range(len(name)):
-                            name[i]="_".join([name[i],type_])
-                        for source in nodes[entry1]:
-                            for target in nodes[entry2]:
-                                sif.append([source,copy.deepcopy(name),target])
-            relTypes.append("CPXrel")
-            for edge in sif:
-                edges[edge[0]]={}
-            for edge in sif:
-                edges[edge[0]][edge[2]]={}
-            for source in edges.keys():
-                for target in edges[source].keys():
-                    for type_ in relTypes:
-                        edges[source][target][type_]=[]
-            for edge in sif:
-                for rel in edge[1]:
-                    for type_ in relTypes:
-                        if rel.endswith("_"+type_):
-                            if rel not in edges[edge[0]][edge[2]][type_]:
-                                edges[edge[0]][edge[2]][type_].append(rel)
-                            break
-            sif=[]
-            for source in edges.keys():
-                for target in edges[source].keys():
-                    multi=0
-                    for type_ in edges[source][target].keys():
-                        if len(edges[source][target][type_])!=0:
-                            multi+=1
-                    for type_ in edges[source][target].keys():
-                        if len(edges[source][target][type_])!=0:
-                            edge="\t".join([source,",".join(edges[source][target][type_]),target])
-                            if edge not in sif:
-                                sif.append(edge)
-                            if (multi>1) and (edge not in multiEdges):
-                                multiEdges.append(edge)
-            if len(warns)!=0:
-                warnFile=list(os.path.splitext(kgmlFile))
-                warnFile[1]="-warnings.txt"
-                warnFile="".join(warnFile)
-                print("Warning: kgml2sif: "+kgmlFile+": see "+warnFile)
-                open(warnFile,"w").write("\n".join(warns)+"\n")
-            if len(multiEdges)!=0:
-                multiFile=list(os.path.splitext(kgmlFile))
-                multiFile[1]="-multi.sif"
-                multiFile="".join(multiFile)
-                print("Warning: kgml2sif: "+kgmlFile+": contains multi-edges, see "+multiFile)
-                open(multiFile,"w").write("\n".join(multiEdges)+"\n")
-            if len(sif)==0:
-                print("Warning: kgml2sif: "+kgmlFile+": empty after siffing, skipping")
+                for i in range(len(nodes[id_])):
+                    symbol=[]
+                    if (args.symbol!=None) and (nodes[id_][i] in kegg2symbol.keys()):
+                        symbol.append(kegg2symbol[nodes[id_][i]])
+                    if (args.compound!=None) and (nodes[id_][i] in compound2name.keys()):
+                        symbol.append(compound2name[nodes[id_][i]])
+                    if len(symbol)==1:
+                        nodes[id_][i]=symbol[0]
+                    elif len(symbol)>1:
+                        warns.append("node "+id_+": "+nodes[id_][i]+": has correspondences in both kegg2symbol and compound2name, skipping")
+        for id_ in nodes.keys():
+            noDups=[]
+            for name in nodes[id_]:
+                if name not in noDups:
+                    noDups.append(name)
+            nodes[id_]=copy.deepcopy(noDups)
+        for id_ in groups.keys():
+            componentIDs=[]
+            inNodes=[]
+            for component in groups[id_].findall("component"):
+                componentIDs.append(component.get("id"))
+            for componentID in componentIDs:
+                inNodes.append(componentID in nodes.keys())
+            if len(componentIDs)==0:
+                warns.append("group "+id_+": empty, skipping")
+            elif len(componentIDs)==1:
+                warns.append("group "+id_+": only one component, skipping")
+            elif False in inNodes:
+                warns.append("group "+id_+": contains invalid or unconsidered nodes, skipping")
             else:
-                sifFile=list(os.path.splitext(kgmlFile))
-                sifFile[1]=".sif"
-                sifFile="".join(sifFile)
-                open(sifFile,"w").write("\n".join(sif)+"\n")
+                members=[]
+                cpxs1=[]
+                cpxs2=[]
+                nodes[id_]=[]
+                for componentID in componentIDs:
+                    members.append(copy.deepcopy(nodes[componentID]))
+                n=len(members)
+                m=1
+                for i in range(n):
+                    m*=len(members[i])
+                for i in range(n):
+                    cpxs1.append([])
+                    p=len(members[i])
+                    q=1
+                    for j in range(i+1,n):
+                        q*=len(members[j])
+                    for j in range(m):
+                        cpxs1[i].append(members[i][(j//q)%p])
+                for i in range(m):
+                    cpxs2.append([])
+                    for j in range(n):
+                        cpxs2[i].append(cpxs1[j][i])
+                    cpxs2[i]=sorted(cpxs2[i])
+                for cpx in sorted(cpxs2):
+                    name="::".join(cpx)
+                    if name not in nodes[id_]:
+                        nodes[id_].append(name)
+                    for node in cpx:
+                        sif.append([node,["membership_CPXrel"],name])
+        for relation in pathway.findall("relation"):
+            type_=relation.get("type")
+            if type_ in relTypes:
+                entry1=relation.get("entry1")
+                entry2=relation.get("entry2")
+                name=[]
+                for subtype in relation.findall("subtype"):
+                    name.append(subtype.get("name"))
+                if entry1 not in nodes.keys():
+                    warns.append(type_+": "+entry1+" --> "+entry2+": invalid or unconsidered source node, skipping")
+                elif entry2 not in nodes.keys():
+                    warns.append(type_+": "+entry1+" --> "+entry2+": invalid or unconsidered target node, skipping")
+                elif len(name)==0:
+                    warns.append(type_+": "+entry1+" --> "+entry2+": missing name, skipping")
+                elif (None in name) or ("" in name):
+                    warns.append(type_+": "+entry1+" --> "+entry2+": incomplete name, skipping")
+                else:
+                    for i in range(len(name)):
+                        name[i]="_".join([name[i],type_])
+                    for source in nodes[entry1]:
+                        for target in nodes[entry2]:
+                            sif.append([source,copy.deepcopy(name),target])
+        relTypes.append("CPXrel")
+        for edge in sif:
+            edges[edge[0]]={}
+        for edge in sif:
+            edges[edge[0]][edge[2]]={}
+        for source in edges.keys():
+            for target in edges[source].keys():
+                for type_ in relTypes:
+                    edges[source][target][type_]=[]
+        for edge in sif:
+            for rel in edge[1]:
+                for type_ in relTypes:
+                    if rel.endswith("_"+type_):
+                        if rel not in edges[edge[0]][edge[2]][type_]:
+                            edges[edge[0]][edge[2]][type_].append(rel)
+                        break
+        sif=[]
+        for source in edges.keys():
+            for target in edges[source].keys():
+                multi=0
+                for type_ in edges[source][target].keys():
+                    if len(edges[source][target][type_])!=0:
+                        multi+=1
+                for type_ in edges[source][target].keys():
+                    if len(edges[source][target][type_])!=0:
+                        edge="\t".join([source,",".join(edges[source][target][type_]),target])
+                        if edge not in sif:
+                            sif.append(edge)
+                        if (multi>1) and (edge not in multiEdges):
+                            multiEdges.append(edge)
+        if len(warns)!=0:
+            warnFile=list(os.path.splitext(kgmlFile))
+            warnFile[1]="-warnings.txt"
+            warnFile="".join(warnFile)
+            print("Warning: kgml2sif: "+kgmlFile+": see "+warnFile)
+            open(warnFile,"w").write("\n".join(warns)+"\n")
+        if len(multiEdges)!=0:
+            multiFile=list(os.path.splitext(kgmlFile))
+            multiFile[1]="-multi.sif"
+            multiFile="".join(multiFile)
+            print("Warning: kgml2sif: "+kgmlFile+": contains multi-edges, see "+multiFile)
+            open(multiFile,"w").write("\n".join(multiEdges)+"\n")
+        if len(sif)==0:
+            print("Warning: kgml2sif: "+kgmlFile+": empty after siffing, skipping")
+        else:
+            sifFile=list(os.path.splitext(kgmlFile))
+            sifFile[1]=".sif"
+            sifFile="".join(sifFile)
+            open(sifFile,"w").write("\n".join(sif)+"\n")

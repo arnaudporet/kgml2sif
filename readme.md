@@ -6,11 +6,11 @@ This work is licensed under the [Apache License Version 2.0](https://www.apache.
 
 ## kgml2sif
 
-Converts KGML-encoded KEGG pathways to the SIF file format.
+Convert KGML-encoded KEGG pathways to the SIF file format.
 
-For information about the KGML file format, please see at the end of this readme file.
+For information about the KGML file format see at the end of this readme file.
 
-For information about the SIF file format, please see at the end of this readme file.
+For information about the SIF file format see at the end of this readme file.
 
 ### Requirements
 
@@ -19,43 +19,48 @@ For information about the SIF file format, please see at the end of this readme 
 
 ### Usage
 
-`kgml2sif [-h] [-s FILE] [-c FILE] [-l] kgmlfile [kgmlfile ...]`
+Ensure that `kgml2sif` is executable:
 
-Ensure that `kgml2sif` is executable: `chmod ugo+x kgml2sif`.
+```sh
+chmod ugo+x kgml2sif
+```
+
+Usage: `kgml2sif [-h] [-s <file>] [-c <file>] <kgmlfile> [<kgmlfile> ...]`
 
 Positional arguments:
 
-* `kgmlfile`: a KGML-encoded KEGG pathway
+* `<kgmlfile>`: a KGML-encoded KEGG pathway
 
 Optional arguments:
 
-* `-s/--symbol <file>`: a conversion table for translating KEGG gene IDs to gene symbols (see the `kegg2symbol.csv` file provided with kgml2sif in the `conv` folder)
-* `-c/--compound <file>`: a conversion table for translating compound IDs to compound names (see the `compound2name.csv` file provided with kgml2sif in the `conv` folder)
-* `-l/--license`: print the [Apache License Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) under which kgml2sif is
-* `-h/--help`: print help
+* `-h/--help`: show help and exit
+* `-s/--symbol <file>`: a conversion table for translating KEGG gene IDs to gene symbols (see the file `kegg2symbol.csv` provided with kgml2sif in the `conv` folder)
+* `-c/--compound <file>`: a conversion table for translating compound IDs to compound names (see the file `compound2name.csv` provided with kgml2sif in the `conv` folder)
 
 Currently:
 
-* kgml2sif is more suitable for processing [KEGG signaling pathways](https://www.genome.jp/kegg/pathway.html#environmental). However, extending it to better handle other types of KEGG pathways (such as [metabolic ones](https://www.genome.jp/kegg/pathway.html#metabolism)) is envisioned.
+* kgml2sif is more suitable for processing KEGG signaling pathways
+* however, extending it to better handle other types of KEGG pathways (such as metabolic ones) is envisioned
 * the following node types are considered:
-    * gene
-    * compound
-    * group (in KGML, groups are complexes)
+    * `gene`
+    * `compound`
+    * `group` (in KGML, groups are complexes)
 * the following relation types are considered (in KGML, relations are edges):
-    * PPrel (protein-protein)
-    * GErel (gene expression)
-    * PCrel (protein-compound)
-    * ECrel (enzyme-compound)
+    * `PPrel` (protein-protein)
+    * `GErel` (gene expression)
+    * `PCrel` (protein-compound)
+    * `ECrel` (enzyme-compound)
 
 In the output SIF file:
 
 * relation names (i.e. edge names) are suffixed with their corresponding type, ex:
     * `phosphorylation_PPrel`
     * `repression_GErel`
-* if necessary, edges having multiple types are split in order to obtain one type per edge (__warning:__ it can create multi-edges)
+* if necessary, edges having multiple types are split in order to obtain one type per edge (__warning: it can create multi-edges__)
 * multi-edges, if any, are left inside the output SIF file and kgml2sif warns about the presence of such edges
-* the non-KGML `membership_CPXrel` relation is added to indicate when a node is component of a complex (CPXrel stands for relations involving complexes, an added non-KGML relation type)
-* complexes are named as follows: `cp1::cp2::cp3` where `cp1`, `cp2` and `cp3` are the complex components. By the way, in this example of a 3-components complex, the following edges would be added as explain above:
+* the non-KGML `membership_CPXrel` relation is added to indicate when a node is component of a complex (`CPXrel` stands for relations involving complexes, an added non-KGML relation type)
+* complexes are named as follows: `cp1::cp2::cp3`, where `cp1`, `cp2` and `cp3` are the complex components
+* by the way, in this example of a 3-components complex, the following edges would be added as explain above:
     * `cp1    membership_CPXrel    cp1::cp2::cp3`
     * `cp2    membership_CPXrel    cp1::cp2::cp3`
     * `cp3    membership_CPXrel    cp1::cp2::cp3`
@@ -67,11 +72,11 @@ If `-s/--symbol` or `-c/--compound` are used:
 
 ### Cautions
 
-* currently, the file `kegg2symbol.csv` provided with kgml2sif in the `conv` folder only works for KEGG __human__ gene IDs.
+* currently, the file `kegg2symbol.csv` provided with kgml2sif in the `conv` folder only works with KEGG __human__ gene IDs.
 
 ## Examples
 
-These examples come from downloaded human KEGG pathways.
+These examples come from downloaded human [KEGG pathways](https://www.genome.jp/kegg/pathway.html).
 
 ### ErbB signaling pathway:
 
@@ -88,10 +93,10 @@ These examples come from downloaded human KEGG pathways.
 Note that kgml2sif raises warnings when processing `Insulin_signaling_pathway.xml` (see `Insulin_signaling_pathway-warnings.txt`):
 
 ```
-PCrel: 61 --> 17: missing name, skipping
+PCrel: 67 --> 23: missing name, skipping
 ```
 
-This warning indicates that a PCrel edge linking the node 61 to the node 17 (identified by their IDs inside the KGML file) has no name (i.e. no information about the modeled biological interaction) and is therefore skipped by kgml2sif.
+This warning indicates that a PCrel edge linking the node 67 to the node 23 (identified by their IDs inside the KGML file) has no name (i.e. no information about the modeled biological interaction) and is therefore skipped by kgml2sif.
 
 ### p53 signaling pathway:
 
@@ -114,7 +119,7 @@ Consequently, because these edges are not considered invalid by kgml2sif, they a
 
 KGML stands for KEGG Markup Language. It is an [XML](https://www.w3.org/XML/) representation of [KEGG pathways](https://www.genome.jp/kegg/pathway.html) and is a file format in which KEGG pathways can be downloaded, either from KEGG Pathway itself or using the [KEGG API](https://www.kegg.jp/kegg/rest/keggapi.html).
 
-For full explanations about the the KGML file format, please see https://www.kegg.jp/kegg/xml/docs/.
+For full explanations about the KGML file format see https://www.kegg.jp/kegg/xml/docs/.
 
 ## The SIF file format
 
@@ -124,9 +129,9 @@ In a SIF file encoding a network, each line encodes an edge as follows:
 source \t interaction \t target
 ```
 
-Note that the field separator is the tabulation: the SIF file format is the tab-separated values format TSV with exactly 3 columns.
+Note that the field separator is the tabulation: the SIF file format is the tab-separated values format (TSV) with exactly 3 columns.
 
-For example, the edge representing the _activation_ of _RAF1_ by _HRAS_ is a line of a SIF file encoded as follows:
+For example, the edge representing the activation of RAF1 by HRAS is a line of a SIF file encoded as follows:
 
 ```
 HRAS \t activation \t RAF1
