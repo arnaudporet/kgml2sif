@@ -25,7 +25,7 @@ Ensure that `kgml2sif` is executable:
 chmod ugo+x kgml2sif
 ```
 
-Usage: `kgml2sif [-h] [-s <file>] [-c <file>] <kgmlfile> [<kgmlfile> ...]`
+Usage: `kgml2sif [-h] [-s <file>] [-c <file>] [-p] <kgmlfile> [<kgmlfile> ...]`
 
 Positional arguments:
 
@@ -36,11 +36,12 @@ Optional arguments:
 * `-h/--help`: show help and exit
 * `-s/--symbol <file>`: a conversion table for translating KEGG gene IDs to gene symbols (see the file `kegg2symbol.csv` provided with kgml2sif in the `conv` folder)
 * `-c/--compound <file>`: a conversion table for translating compound IDs to compound names (see the file `compound2name.csv` provided with kgml2sif in the `conv` folder)
+* `-p/--prefix`: keep node name prefixes if `-s/--symbol` or `-c/--compound` is used
 
 Currently:
 
 * kgml2sif is more suitable for processing KEGG signaling pathways
-* however, extending it to better handle other types of KEGG pathways (such as metabolic ones) is envisioned
+* however, extending it to better handle other types of KEGG pathways, such as metabolic ones, is envisioned
 * the following node types are considered:
     * `gene`
     * `compound`
@@ -56,7 +57,7 @@ In the output SIF file:
 * relation names (i.e. edge names) are suffixed with their corresponding type, ex:
     * `phosphorylation_PPrel`
     * `repression_GErel`
-* if necessary, edges having multiple types are split in order to obtain one type per edge (__warning: it can create multi-edges__)
+* if necessary, edges having multiple types are split in order to obtain one type per edge (__WARNING: it can create multi-edges__)
 * multi-edges, if any, are left inside the output SIF file and kgml2sif warns about the presence of such edges
 * the non-KGML `membership_CPXrel` relation is added to indicate when a node is component of a complex (`CPXrel` stands for relations involving complexes, an added non-KGML relation type)
 * complexes are named as follows: `cp1::cp2::cp3`, where `cp1`, `cp2` and `cp3` are the complex components
@@ -65,10 +66,18 @@ In the output SIF file:
     * `cp2    membership_CPXrel    cp1::cp2::cp3`
     * `cp3    membership_CPXrel    cp1::cp2::cp3`
 
-If `-s/--symbol` or `-c/--compound` are used:
+If `-s/--symbol` or `-c/--compound` is used:
 
-* the conversion tables must be 2-columns CSV files with semicolon as field separator (see the `conv` folder)
+* the conversion table must be a 2-columns CSV file with semicolon as field separator (see the `conv` folder)
 * unmatched IDs are left unchanged in the output SIF file
+
+Node name prefixes in KGML:
+
+* specify the node type in the node name
+* the name of nodes representing human genes is prefixed with `hsa:`
+* the name of nodes representing compounds is prefixed with `cpd:`
+* the name of nodes representing glycans (a subtype of compounds) is prefixed with `gl:`
+* the name of nodes representing drugs (a subtype of compounds) is prefixed with `dr:`
 
 ### Cautions
 

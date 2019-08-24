@@ -18594,6 +18594,17 @@ cpd:C22158;Lipoyl-carrier protein E2
 cpd:C22159;[Glycine cleavage system H]-N6-octanoyl-L-lysine
 cpd:C22160;[Lipoyl-carrier protein E2]-N6-octanoyl-L-lysine
 cpd:C22161;Dihydrolipoyl-AMP
+cpd:C22162;Histidyltryptophyldiketopiperazine
+cpd:C22163;Roquefortine D
+cpd:C22164;Dehydrohistidyltryptophyldiketopiperazine
+cpd:C22165;Roquefortine C
+cpd:C22166;Glandicoline A
+cpd:C22167;Glandicoline B
+cpd:C22168;Meleagrin
+cpd:C22169;N1-Hydroxy-roquefortine C
+cpd:C22170;Roquefortine L
+cpd:C22171;Roquefortine F
+cpd:C22172;Neoxaline
 gl:G00001;N-Acetyl-D-glucosaminyldiphosphodolichol
 gl:G00002;N,N'-Chitobiosyldiphosphodolichol
 gl:G00003;(GlcNAc)2 (Man)1 (PP-Dol)1

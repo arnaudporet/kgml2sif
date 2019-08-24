@@ -19,43 +19,54 @@ description="""
 Convert KGML-encoded KEGG pathways to the SIF file format.
 """,
 epilog="""
-Currently, kgml2sif is more suitable for processing KEGG signaling pathways.
-However, extending it to better handle other types of KEGG pathways (such as
-metabolic ones) is envisioned.
+Currently:
+    * kgml2sif is more suitable for processing KEGG signaling pathways
+    * however, extending it to better handle other types of KEGG pathways, such
+      as metabolic ones, is envisioned
+    * the following node types are considered:
+        * gene
+        * compound
+        * group (in KGML, groups are complexes)
+    * the following relation types are considered (in KGML, relations are
+      edges):
+        * PPrel (protein-protein)
+        * GErel (gene expression)
+        * PCrel (protein-compound)
+        * ECrel (enzyme-compound)
 
-Currently, the following node types are considered: gene, compound and group. In
-KGML, groups are complexes.
+In the output SIF file:
+    * relation names (i.e. edge names) are suffixed with their corresponding
+      type, ex:
+        * phosphorylation_PPrel
+        * repression_GErel
+    * if necessary, edges having multiple types are split in order to obtain one
+      type per edge (WARNING: it can create multi-edges)
+    * multi-edges, if any, are left inside the output SIF file and kgml2sif
+      warns about the presence of such edges
+    * the non-KGML membership_CPXrel relation is added to indicate when a node
+      is component of a complex (CPXrel stands for relations involving
+      complexes, an added non-KGML relation type)
+    * complexes are named as follows: cp1::cp2::cp3, where cp1, cp2 and cp3 are
+      the complex components
+    * by the way, in this example of a 3-components complex, the following edges
+      would be added as explain above:
+        * cp1    membership_CPXrel    cp1::cp2::cp3
+        * cp2    membership_CPXrel    cp1::cp2::cp3
+        * cp3    membership_CPXrel    cp1::cp2::cp3
 
-Currently, the following relation types are considered: PPrel (protein-protein),
-GErel (gene expression), PCrel (protein-compound) and ECrel (enzyme-compound).
-In KGML, relations are edges.
-
-In the output SIF file, relation names (i.e. edge names) are suffixed with their
-corresponding type, ex:
-    * phosphorylation_PPrel
-    * repression_GErel
-
-In the output SIF file and if necessary, edges having multiple types are split
-in order to obtain one type per edge. Warning: it can create multi-edges.
-
-Multi-edges, if any, are left inside the output SIF file and kgml2sif warns
-about the presence of such edges.
-
-In the output SIF file, the non-KGML \"membership_CPXrel\" relation is added to
-indicate when a node is component of a complex. CPXrel stands for relations
-involving complexes, an added non-KGML relation type.
-
-In the output SIF file, complexes are named as follows: cp1::cp2::cp3, where
-cp1, cp2 and cp3 are the complex components. By the way, in this example of a
-3-components complex, the following edges would be added as explain above:
-    * cp1    membership_CPXrel    cp1::cp2::cp3
-    * cp2    membership_CPXrel    cp1::cp2::cp3
-    * cp3    membership_CPXrel    cp1::cp2::cp3
-
-If -s/--symbol or -c/--compound are used:
-    * the conversion tables must be 2-columns CSV files with semicolon as field
+If -s/--symbol or -c/--compound is used:
+    * the conversion table must be a 2-columns CSV file with semicolon as field
       separator
     * unmatched IDs are left unchanged in the output SIF file
+
+Node name prefixes in KGML:
+    * specify the node type in the node name
+    * the name of nodes representing human genes is prefixed with "hsa:"
+    * the name of nodes representing compounds is prefixed with "cpd:"
+    * the name of nodes representing glycans (a subtype of compounds) is
+      prefixed with "gl:"
+    * the name of nodes representing drugs (a subtype of compounds) is prefixed
+      with "dr:"
 
 Full explanation of the KGML file format at https://www.kegg.jp/kegg/xml/docs/.
 
@@ -66,6 +77,7 @@ formatter_class=argparse.RawDescriptionHelpFormatter
 parser.add_argument("kgmlfile",type=str,metavar="<kgmlfile>",help="a KGML-encoded KEGG pathway",nargs="+")
 parser.add_argument("-s","--symbol",type=str,metavar="<file>",help="a conversion table for translating KEGG gene IDs to gene symbols (see the file kegg2symbol.csv provided with kgml2sif)")
 parser.add_argument("-c","--compound",type=str,metavar="<file>",help="a conversion table for translating compound IDs to compound names (see the file compound2name.csv provided with kgml2sif)")
+parser.add_argument("-p","--prefix",action="store_true",help="keep node name prefixes if -s/--symbol or -c/--compound is used")
 args=parser.parse_args()
 import os.path
 okSymb=True
@@ -148,10 +160,14 @@ if okSymb and okCompound:
             for id_ in nodes.keys():
                 for i in range(len(nodes[id_])):
                     symbol=[]
+                    if args.prefix:
+                        prefix="".join(nodes[id_][i].partition(":")[:2])
+                    else:
+                        prefix=""
                     if (args.symbol!=None) and (nodes[id_][i] in kegg2symbol.keys()):
-                        symbol.append(kegg2symbol[nodes[id_][i]])
+                        symbol.append(prefix+kegg2symbol[nodes[id_][i]])
                     if (args.compound!=None) and (nodes[id_][i] in compound2name.keys()):
-                        symbol.append(compound2name[nodes[id_][i]])
+                        symbol.append(prefix+compound2name[nodes[id_][i]])
                     if len(symbol)==1:
                         nodes[id_][i]=symbol[0]
                     elif len(symbol)>1:
