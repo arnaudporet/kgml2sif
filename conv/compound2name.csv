@@ -1150,7 +1150,7 @@ cpd:C01304;2,5-Diamino-6-(5-phospho-D-ribosylamino)pyrimidin-4(3H)-one
 cpd:C01306;N-Acetyl-beta-D-glucosaminyl-(1->3)-N-acetyl-D-galactosaminyl-R
 cpd:C01308;[3-Methyl-2-oxobutanoate dehydrogenase (2-methylpropanoyl-transferring)] phosphate
 cpd:C01310;4-Deoxy-beta-D-gluc-4-enuronosyl-(1,3)-N-acetyl-D-galactosamine
-cpd:C01311;1,4-beta-D-Galactosyl-(alpha-1,3-L-fucosyl)-N-acetyl-D-glucosaminyl-R
+cpd:C01311;beta-D-Galactosyl-(1->4)-[alpha-L-fucosyl-(1->3)]-N-acetyl-D-glucosaminyl-R
 cpd:C01312;Prostaglandin I2
 cpd:C01313;(S)-N-[3-(3,4-Methylenedioxyphenyl)-2-(mercaptomethyl)-1-oxoprolyl]glycine
 cpd:C01314;(S)-N-[3-(3,4-Methylenedioxyphenyl)-2-(mercaptomethyl)-1-oxoprolyl]-(S)-alanine
@@ -3529,7 +3529,6 @@ cpd:C04652;UDP-2,3-bis(3-hydroxytetradecanoyl)glucosamine
 cpd:C04654;(13E)-11alpha-Hydroxy-9,15-dioxoprost-13-enoate
 cpd:C04655;(2S,3S)-2-Hydroxytridecane-1,2,3-tricarboxylate
 cpd:C04656;1,3-beta-D-Galactosyl-N-acetyl-D-glucosaminyl-R
-cpd:C04657;1,4-beta-D-Galactosyl-N-acetyl-D-glucosaminyl-R
 cpd:C04660;3'-Deoxydihydrostreptomycin 6,3''-bis-phosphate
 cpd:C04661;3alpha,7alpha,12beta-Trihydroxy-5beta-cholanate
 cpd:C04662;4-Deoxy-alpha-L-erythro-hex-4-enopyranuronoside
@@ -5082,6 +5081,7 @@ cpd:C06831;Dithranol
 cpd:C06832;Astemizole
 cpd:C06834;Atorvastatin
 cpd:C06835;Atovaquone
+cpd:C06836;Auranofin
 cpd:C06837;Azathioprine
 cpd:C06838;Azithromycin
 cpd:C06839;Azlocillin
@@ -10280,6 +10280,7 @@ cpd:C12662;Josamycin
 cpd:C12666;Prednisolone sodium succinate
 cpd:C12667;Quercetin 3-O-beta-D-glucosyl-(1->2)-beta-D-glucoside
 cpd:C12668;Quercetin 3-O-beta-D-glucosyl-(1->2)-beta-D-glucosyl-(1->2)-beta-D-glucoside
+cpd:C12669;Deslanoside
 cpd:C12673;Tegafur
 cpd:C12675;Benzylhydrochlorothiazide
 cpd:C12677;Acrinol
@@ -10461,6 +10462,7 @@ cpd:C13453;Xanthoxin
 cpd:C13454;Xanthoxic acid
 cpd:C13455;Abscisic aldehyde
 cpd:C13456;Abscisic alcohol
+cpd:C13470;Lanatoside C
 cpd:C13478;Luliconazole
 cpd:C13480;Tenofovir disoproxil
 cpd:C13482;Phosphodimethylethanolamine
@@ -18605,6 +18607,31 @@ cpd:C22169;N1-Hydroxy-roquefortine C
 cpd:C22170;Roquefortine L
 cpd:C22171;Roquefortine F
 cpd:C22172;Neoxaline
+cpd:C22173;Harderoheme III
+cpd:C22174;Valerianol
+cpd:C22175;Cyclolaudenol
+cpd:C22176;2-O-Sulfo-2'-palmitoyl-alpha,alpha-trehalose
+cpd:C22177;2-O-Sulfo-2'-stearoyl-alpha,alpha-trehalose
+cpd:C22178;4-Nitrobenzoyl-CoA
+cpd:C22179;Demethyldeoxyspectinabilin
+cpd:C22180;Monoglucosyl-enterobactin
+cpd:C22181;Diglucosyl-enterobactin
+cpd:C22182;Triglucosyl-enterobactin
+cpd:C22183;Very-long-chain inositol phospho-(2'R)-2'-hydroxyphytoceramide
+cpd:C22184;Very-long-chain mannosylinositol phospho-(2'R)-2'-hydroxyphytoceramide
+cpd:C22185;N-(2,3-Dihydroxybenzoyl)-L-serine trimer
+cpd:C22186;Triglucosyl-(2,3-dihydroxybenzoylserine)3
+cpd:C22187;Diglucosyl-(2,3-dihydroxybenzoylserine)3
+cpd:C22188;Monoglucosyl-(2,3-dihydroxybenzoylserine)3
+cpd:C22189;Acetyldigoxin
+cpd:C22190;beta-Acetyldigoxin
+cpd:C22191;Acetyldigitoxin
+cpd:C22192;Anthelmycin
+cpd:C22193;Dapagliflozin
+cpd:C22194;Empagliflozin
+cpd:C22195;Pyrazofurin
+cpd:C22196;Tiazofurin
+cpd:C22197;Semduramicin
 gl:G00001;N-Acetyl-D-glucosaminyldiphosphodolichol
 gl:G00002;N,N'-Chitobiosyldiphosphodolichol
 gl:G00003;(GlcNAc)2 (Man)1 (PP-Dol)1
@@ -37044,7 +37071,7 @@ dr:D07636;Cefapirin
 dr:D07637;Cephapirin benzathine
 dr:D07638;Cefcapene
 dr:D07639;Cefditoren
-dr:D07640;Cefixime hydrate
+dr:D07640;Cefixime
 dr:D07641;Cefmenoxime
 dr:D07642;Cefminox
 dr:D07643;Cefodizime
@@ -39620,7 +39647,7 @@ dr:D10530;Sodium selenite
 dr:D10531;Clindamycin phosphate hydrate
 dr:D10532;Catridecacog
 dr:D10533;Umeclidinium bromide and vilanterol
-dr:D10534;Calcipotrine and betamethasone dipropionate
+dr:D10534;Calcipotriene and betamethasone dipropionate
 dr:D10535;Meningococcus A,C,Y,W-135, tetravalent purified polysaccharides antigen conjugated
 dr:D10536;Japanese cedar pollen extract
 dr:D10537;Methylthioninium chloride hydrate
@@ -40180,6 +40207,7 @@ dr:D11093;Avacopan
 dr:D11094;Lanadelumab
 dr:D11095;Atorvastatin calcium propylene glycol solvate
 dr:D11096;Neomycin and polymyxin B sulfate
+dr:D11097;Polymyxin B sulfate and bacitracin zinc
 dr:D11098;Telenzepine hydrochloride hydrate
 dr:D11099;Nebracetam fumarate
 dr:D11100;Sepimostat mesilate
@@ -40607,8 +40635,8 @@ dr:D11525;Enfortumab vedotin
 dr:D11526;Broflanilide
 dr:D11527;Zolbetuximab (genetical recombination)
 dr:D11528;Viltolarsen
-dr:D11529;Trastuzumab deruxtecan (genetical recombination)
-dr:D11530;Sutimlimab (genetical recombination)
+dr:D11529;Trastuzumab deruxtecan
+dr:D11530;Sutimlimab
 dr:D11531;Narsoplimab
 dr:D11532;Lodapolimab
 dr:D11533;Zagotenemab
@@ -40708,3 +40736,23 @@ dr:D11627;Acyclovir and hydrochortisone
 dr:D11628;Benzhydrocodone and acetaminophen
 dr:D11629;Bremelanotide acetate
 dr:D11630;Aminophylline dihydrate
+dr:D11631;Lefamulin
+dr:D11632;Lefamulin acetate
+dr:D11633;Venglustat
+dr:D11634;Venglustat malate
+dr:D11635;Tasipimidine
+dr:D11636;Tasipimidine sulfate
+dr:D11637;Relmapirazin
+dr:D11638;Lanraplenib succinate
+dr:D11639;Foslinanib
+dr:D11640;Firsocostat
+dr:D11641;Danicopan
+dr:D11642;Dilpacimab
+dr:D11643;Budigalimab
+dr:D11644;Lurbinectedin
+dr:D11645;Fluorescein sodium and benoxinate hydrochloride
+dr:D11646;Benzoyl peroxide and erythromycin
+dr:D11647;Brompheniramine, pseudoephedrine and dextromethorphan
+dr:D11648;Volanesorsen
+dr:D11649;Trientine tetrahydrochloride
+dr:D11650;Volanesorsen sodium
