@@ -382,6 +382,7 @@ IKBKB	inhibition_PPrel,phosphorylation_PPrel	IRS2
 PYGB	inhibition_PCrel	Starch
 PYGL	inhibition_PCrel	Starch
 PYGM	inhibition_PCrel	Starch
+SLC2A4	unknown_PCrel	D-Glucose
 PIK3CA	compound_PPrel,activation_PPrel	PRKCI
 PIK3CA	compound_PPrel,activation_PPrel	PRKCZ
 PIK3CA	compound_PPrel,activation_PPrel	PDPK1

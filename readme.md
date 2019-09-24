@@ -57,6 +57,7 @@ In the output SIF file:
 * relation names (i.e. edge names) are suffixed with their corresponding type, ex:
     * `phosphorylation_PPrel`
     * `repression_GErel`
+* if a relation name is missing then it is automatically named `unknown`
 * if necessary, edges having multiple types are split in order to obtain one type per edge (__WARNING: it can create multi-edges__)
 * multi-edges, if any, are left inside the output SIF file and kgml2sif warns about the presence of such edges
 * the non-KGML `membership_CPXrel` relation is added to indicate when a node is component of a complex (`CPXrel` stands for relations involving complexes, an added non-KGML relation type)
@@ -98,14 +99,6 @@ These examples come from downloaded human [KEGG pathways](https://www.genome.jp/
 ```sh
 ./kgml2sif -s conv/kegg2symbol.csv -c conv/compound2name.csv examples/Insulin_signaling_pathway/Insulin_signaling_pathway.xml
 ```
-
-Note that kgml2sif raises warnings when processing `Insulin_signaling_pathway.xml` (see `Insulin_signaling_pathway-warnings.txt`):
-
-```
-PCrel: 67 --> 23: missing name, skipping
-```
-
-This warning indicates that a PCrel edge linking the node 67 to the node 23 (identified by their IDs inside the KGML file) has no name (i.e. no information about the modeled biological interaction) and is therefore skipped by kgml2sif.
 
 ### p53 signaling pathway:
 

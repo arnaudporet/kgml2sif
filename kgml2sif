@@ -39,11 +39,12 @@ In the output SIF file:
       type, ex:
         * phosphorylation_PPrel
         * repression_GErel
+    * if a relation name is missing then it is automatically named "unknown"
     * if necessary, edges having multiple types are split in order to obtain one
       type per edge (WARNING: it can create multi-edges)
     * multi-edges, if any, are left inside the output SIF file and kgml2sif
       warns about the presence of such edges
-    * the non-KGML membership_CPXrel relation is added to indicate when a node
+    * the non-KGML "membership_CPXrel" relation is added to indicate when a node
       is component of a complex (CPXrel stands for relations involving
       complexes, an added non-KGML relation type)
     * complexes are named as follows: cp1::cp2::cp3, where cp1, cp2 and cp3 are
@@ -75,8 +76,8 @@ For explanations about the SIF file format, see the readme file of kgml2sif.
 formatter_class=argparse.RawDescriptionHelpFormatter
 )
 parser.add_argument("kgmlfile",type=str,metavar="<kgmlfile>",help="a KGML-encoded KEGG pathway",nargs="+")
-parser.add_argument("-s","--symbol",type=str,metavar="<file>",help="a conversion table for translating KEGG gene IDs to gene symbols (see the file kegg2symbol.csv provided with kgml2sif)")
-parser.add_argument("-c","--compound",type=str,metavar="<file>",help="a conversion table for translating compound IDs to compound names (see the file compound2name.csv provided with kgml2sif)")
+parser.add_argument("-s","--symbol",type=str,metavar="<file>",help="a conversion table for translating KEGG gene IDs to gene symbols (see the file \"kegg2symbol.csv\" provided with kgml2sif)")
+parser.add_argument("-c","--compound",type=str,metavar="<file>",help="a conversion table for translating compound IDs to compound names (see the file \"compound2name.csv\" provided with kgml2sif)")
 parser.add_argument("-p","--prefix",action="store_true",help="keep node name prefixes if -s/--symbol or -c/--compound is used")
 args=parser.parse_args()
 import os.path
@@ -226,23 +227,24 @@ if okSymb and okCompound:
             if type_ in relTypes:
                 entry1=relation.get("entry1")
                 entry2=relation.get("entry2")
-                name=[]
-                for subtype in relation.findall("subtype"):
-                    name.append(subtype.get("name"))
                 if entry1 not in nodes.keys():
                     warns.append(type_+": "+entry1+" --> "+entry2+": invalid or unconsidered source node, skipping")
                 elif entry2 not in nodes.keys():
                     warns.append(type_+": "+entry1+" --> "+entry2+": invalid or unconsidered target node, skipping")
-                elif len(name)==0:
-                    warns.append(type_+": "+entry1+" --> "+entry2+": missing name, skipping")
-                elif (None in name) or ("" in name):
-                    warns.append(type_+": "+entry1+" --> "+entry2+": incomplete name, skipping")
                 else:
-                    for i in range(len(name)):
-                        name[i]="_".join([name[i],type_])
-                    for source in nodes[entry1]:
-                        for target in nodes[entry2]:
-                            sif.append([source,copy.deepcopy(name),target])
+                    name=[]
+                    for subtype in relation.findall("subtype"):
+                        name.append(subtype.get("name"))
+                    if (None in name) or ("" in name):
+                        warns.append(type_+": "+entry1+" --> "+entry2+": incomplete name, skipping")
+                    else:
+                        if len(name)==0:
+                            name=["unknown"]
+                        for i in range(len(name)):
+                            name[i]="_".join([name[i],type_])
+                        for source in nodes[entry1]:
+                            for target in nodes[entry2]:
+                                sif.append([source,copy.deepcopy(name),target])
         relTypes.append("CPXrel")
         for edge in sif:
             edges[edge[0]]={}
