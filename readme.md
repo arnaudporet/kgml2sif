@@ -1,18 +1,16 @@
-# Converting KGML-encoded KEGG human pathways to the SIF file format
+# Convert KGML-encoded KEGG human pathways to the SIF file format
 
-Copyright 2019 [Arnaud Poret](https://github.com/arnaudporet)
+Copyright (C) 2019 [Arnaud Poret](https://github.com/arnaudporet)
 
 This work is licensed under the [GNU General Public License](https://www.gnu.org/licenses/gpl.html).
 
-To view a copy of this license, visit https://www.gnu.org/licenses/gpl.html
+To view a copy of this license, visit https://www.gnu.org/licenses/gpl.html.
 
 ## kgml2sif
 
 Convert KGML-encoded KEGG human pathways to the SIF file format.
 
-For information about the KGML file format see at the end of this readme file.
-
-For information about the SIF file format see at the end of this readme file.
+For information about the KGML file format and the SIF file format, see at the end of this readme file.
 
 ### Requirements
 
@@ -27,48 +25,75 @@ Ensure that `kgml2sif` is executable:
 chmod ugo+x kgml2sif
 ```
 
-Usage: `kgml2sif [-h] [-s <tsvfile>] [-c <tsvfile>] [-p] <kgmlfile> [<kgmlfile> ...]`
+Usage:
+
+```
+kgml2sif [-h] [-g <tsvFile>] [-c <tsvFile>] <kgmlFile> [<kgmlFile> ...]
+```
 
 Positional arguments:
 
-* `<kgmlfile>`: a KGML-encoded KEGG human pathway
+* `<kgmlFile>`: a KGML-encoded KEGG human pathway
 
 Optional arguments:
 
-* `-h/--help`: print help
-* `-s/--symbol <tsvfile>`: a conversion table for translating KEGG human gene IDs to gene symbols (see the file `gene2symbol.tsv` provided with kgml2sif in the `conv` folder)
-* `-c/--compound <tsvfile>`: a conversion table for translating KEGG compound IDs to compound names (see the file `compound2name.tsv` provided with kgml2sif in the `conv` folder)
-* `-p/--prefix`: keep node name prefixes if `-s/--symbol` or `-c/--compound` is used
+* `-h/--help`: show help
+* `-g/--geneSymbol <tsvFile>`: a conversion table for translating KEGG human gene IDs to gene symbols (see the file `gene2symbol.tsv` provided with kgml2sif in the `conv` folder)
+* `-c/--compoundName <tsvFile>`: a conversion table for translating KEGG compound IDs to compound names (see the file `compound2name.tsv` provided with kgml2sif in the `conv` folder)
 
 Currently:
 
 * the following node types are considered:
-    * `gene`
+    * `gene` (in KGML, genes also hold for the corresponding proteins/gene products)
     * `compound`
-    * `group` (in KGML, groups are complexes)
-* the following relation types are considered (in KGML, relations are edges):
-    * `PPrel` (protein-protein)
-    * `GErel` (gene expression)
-    * `PCrel` (protein-compound)
-    * `ECrel` (enzyme-compound)
+    * `group` (in KGML, groups hold for complexes)
+* the following relation types are considered (in KGML, relations hold for edges):
+    * `PPrel`: protein-protein, protein-complex or complex-complex links
+    * `GErel`: protein-gene or complex-gene links (_i.e._ gene expression)
+    * `PCrel`: protein-compound or complex-compound links
+    * `ECrel`: enzyme-enzyme links sharing a common compound (as product for the first enzyme and as substrate for the second one)
 
 In the output SIF file:
 
-* relation names (_i.e._ edge names) are suffixed with their corresponding type, ex:
+* edge names (_i.e._ relation names) are suffixed with their corresponding type, ex:
     * `phosphorylation_PPrel`
     * `repression_GErel`
+* edges for which the name is missing are automatically named `unknown`, suffixed with their corresponding type, ex:
+    * `unknown_PCrel`
+* edges are automatically checked regarding their type and the nodes they link:
+    * `PPrel`:
+```
+(source=protein OR source=complex) AND (target=protein OR target=complex)
+```
+    * `GErel`:
+```
+(source=protein OR source=complex) AND (target=gene)
+```
+    * `PCrel`:
+```
+(source=protein OR source=complex) AND (target=compound)
+OR
+(source=compound) AND (target=protein OR target=complex)
+```
+    * `ECrel`:
+```
+(source=protein OR source=complex) AND (target=protein OR target=complex)
+```
 * if necessary, edges having multiple types are split in order to obtain one type per edge (__warning: it can create multi-edges__)
 * multi-edges, if any, are left inside the output SIF file and kgml2sif warns about it
-* the non-KGML `membership_CPXrel` relation is added to indicate when a node is component of a complex (CPXrel stands for relations involving complexes, an added non-KGML relation type)
-* complexes are named as follows: `cp1::cp2::cp3`, where `cp1`, `cp2` and `cp3` are the complex components
+* the non-KGML `membership_CPXrel` edges are added in order to indicate when nodes are component of complexes (`CPXrel` is an added non-KGML relation type)
+* complexes are named as follows:
+    * `cp1&cp2&cp3`
+    * where `cp1`, `cp2` and `cp3` are the complex components
 * by the way, in this example of a 3-components complex, the following edges would be added as explain above:
-    * `cp1    membership_CPXrel    cp1::cp2::cp3`
-    * `cp2    membership_CPXrel    cp1::cp2::cp3`
-    * `cp3    membership_CPXrel    cp1::cp2::cp3`
+    * `cp1    membership_CPXrel    cp1&cp2&cp3`
+    * `cp2    membership_CPXrel    cp1&cp2&cp3`
+    * `cp3    membership_CPXrel    cp1&cp2&cp3`
 
-If `-s/--symbol` or `-c/--compound` is used:
+If `-g/--geneSymbol` or `-c/--compoundName` is used:
 
-* the conversion table must be a 2-columns TSV file
+* kgml2sif attempts to name gene nodes (`-g/--geneSymbol`) or compound nodes (`-c/--compoundName`) according to a provided conversion table _KEGG ID to KEGG name_
+* the conversion table must be a 2-columns TSV file (see the files `gene2symbol.tsv` and `compound2name.tsv` provided with kgml2sif in the `conv` folder)
 * unmatched KEGG IDs are left unchanged in the output SIF file and kgml2sif warns about it
 
 Node name prefixes in KGML:
@@ -83,60 +108,70 @@ Node name prefixes in KGML:
 
 These examples come from downloaded human [KEGG pathways](https://www.genome.jp/kegg/pathway.html).
 
+The SIF files produced by kgml2sif from these examples are also in the SVG file format for visualization purpose.
+
+### Apoptosis
+
+```sh
+./kgml2sif -g conv/gene2symbol.tsv -c conv/compound2name.tsv examples/Apoptosis/Apoptosis.xml
+```
+
 ### ErbB signaling pathway
 
 ```sh
-./kgml2sif -s conv/gene2symbol.tsv -c conv/compound2name.tsv examples/ErbB_signaling_pathway/ErbB_signaling_pathway.xml
+./kgml2sif -g conv/gene2symbol.tsv -c conv/compound2name.tsv examples/ErbB_signaling_pathway/ErbB_signaling_pathway.xml
 ```
-
-Note that when processing the KGML file `ErbB_signaling_pathway.xml`, kgml2sif encountered unconsidered nodes (see the warn file `ErbB_signaling_pathway.warns.txt`), namely nodes not being genes, compounds or groups/complexes:
-
-```
-map: unconsidered node type, skipping
-```
-
-This is because the node type `map` is a pointer to another KEGG pathway, useful for connecting pathways between them, but not a node of the considered pathway. Consequently, kgml2sif has skipped these nodes and has logged the corresponding warns in the warn file `ErbB_signaling_pathway.warns.txt`.
-
-By the way, merging several pathways in the SIF file format is quite easy: concatenate the SIF files and remove duplicated lines, if any.
 
 ### Insulin signaling pathway
 
 ```sh
-./kgml2sif -s conv/gene2symbol.tsv -c conv/compound2name.tsv examples/Insulin_signaling_pathway/Insulin_signaling_pathway.xml
+./kgml2sif -g conv/gene2symbol.tsv -c conv/compound2name.tsv examples/Insulin_signaling_pathway/Insulin_signaling_pathway.xml
 ```
 
-Note that when processing the KGML file `Insulin_signaling_pathway.xml`, kgml2sif again encountered nodes of type `map`: having a couple of `map` nodes is common in KGML files.
-
-However, kgml2sif encountered another warning (see the warn file `Insulin_signaling_pathway.warns.txt`):
+Note that, when processing the KGML file `Insulin_signaling_pathway.xml`, kgml2sif has encountered an invalid edge (see the warn file `Insulin_signaling_pathway.warns.txt`):
 
 ```
-PCrel: (67,23): no name(s), skipping
+PCrel: (68,65): (gene,gene): invalid edge, skipping
 ```
 
-This warning indicates that, in the KGML file `Insulin_signaling_pathway.xml`, kgml2sif encountered an edge of type `PCrel` linking the node `67` to the node `23` (node IDs in the KGML file) for which the name is missing. Consequently, kgml2sif has skipped this edge and has logged the corresponding warn in the warn file `Insulin_signaling_pathway.warns.txt`.
+This edge links the node 68 to the node 65 (node IDs inside `Insulin_signaling_pathway.xml`) which are both of type _gene_ (which also stands for the associated protein/gene product).
+
+In addition, this edge is of type _PCrel_, meaning that it is intended to link genes/proteins to compounds (or _vice versa_).
+
+However, neither the node 68 nor the node 65 is of type _compound_: they are both of type _gene_.
+
+Consequently, kgml2sif has skipped this edge and has logged the corresponding warns in the warn file `Insulin_signaling_pathway.warns.txt`.
 
 ### p53 signaling pathway
 
 ```sh
-./kgml2sif -s conv/gene2symbol.tsv -c conv/compound2name.tsv examples/p53_signaling_pathway/p53_signaling_pathway.xml
+./kgml2sif -g conv/gene2symbol.tsv -c conv/compound2name.tsv examples/p53_signaling_pathway/p53_signaling_pathway.xml
 ```
 
-In addition to a couple of `map` nodes (see the warn file `p53_signaling_pathway.warns.txt`), kgml2sif indicates that there are multi-edges in the KGML file `p53_signaling_pathway.xml` (see the SIF file `p53_signaling_pathway.multi.sif`):
+Note that, when processing the KGML file `p53_signaling_pathway.xml`, kgml2sif has encountered multi-edges (see the SIF file `p53_signaling_pathway.multiEdges.sif`):
 
 ```
-TP53    activation_PPrel    MDM2
-TP53    expression_GErel    MDM2
+hsa:TP53    activation_PPrel    hsa:MDM2
+hsa:TP53    expression_GErel    hsa:MDM2
 ```
 
-When processing the KGML file `p53_signaling_pathway.xml`, kgml2sif identifies two edges linking TP53 to MDM2. Theses two edges are therefore multi-edges. However, they are not considered invalid by kgml2sif because it can not determine if one of them is wrong, or which is the most relevant, or if they are both meaningful (kgml2sif is not a human expert able to perform such judgments).
+These two edges link TP53 to MDM2: they are therefore multi-edges.
 
-Consequently, because these edges are not considered invalid by kgml2sif, they are left inside the output SIF file `p53_signaling_pathway.sif` and kgml2sif warns about the presence of such edges.
+However, they are not considered invalid by kgml2sif because it can not determine if one of them is wrong, or which is the most relevant, or if they are both meaningful: kgml2sif is not a human able to perform such judgments.
+
+Consequently, these edges are left inside the output SIF file `p53_signaling_pathway.sif` and kgml2sif warns about the presence of such edges.
+
+### TNF signaling pathway
+
+```sh
+./kgml2sif -g conv/gene2symbol.tsv -c conv/compound2name.tsv examples/TNF_signaling_pathway/TNF_signaling_pathway.xml
+```
 
 ## The KGML file format
 
-KGML stands for KEGG Markup Language. It is an [XML](https://www.w3.org/XML/) representation of [KEGG pathways](https://www.genome.jp/kegg/pathway.html) and is a file format in which KEGG pathways can be downloaded, either from KEGG Pathway itself or using the [KEGG API](https://www.kegg.jp/kegg/rest/keggapi.html).
+KGML stands for KEGG Markup Language. It is an [XML](https://www.w3.org/XML/) representation of [KEGG pathways](https://www.genome.jp/kegg/pathway.html) and is a file format in which KEGG pathways can be downloaded, either from the KEGG web site or using the [KEGG API](https://www.kegg.jp/kegg/rest/keggapi.html).
 
-For full explanations about the KGML file format see https://www.kegg.jp/kegg/xml/docs/.
+For a complete explanation of the KGML file format, see https://www.kegg.jp/kegg/xml/docs/.
 
 ## The SIF file format
 

@@ -1,8 +1,1 @@
-map: unconsidered node type, skipping
-map: unconsidered node type, skipping
-map: unconsidered node type, skipping
-map: unconsidered node type, skipping
-map: unconsidered node type, skipping
-map: unconsidered node type, skipping
-map: unconsidered node type, skipping
-PCrel: (67,23): no name(s), skipping
+PCrel: (68,65): (gene,gene): invalid edge, skipping

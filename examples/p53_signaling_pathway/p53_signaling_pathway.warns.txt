@@ -1,5 +1,0 @@
-map: unconsidered node type, skipping
-map: unconsidered node type, skipping
-map: unconsidered node type, skipping
-map: unconsidered node type, skipping
-map: unconsidered node type, skipping

@@ -1,0 +1,142 @@
+hsa:BIRC2	activation_PPrel,ubiquitination_PPrel	hsa:RIPK1
+hsa:BIRC3	activation_PPrel,ubiquitination_PPrel	hsa:RIPK1
+hsa:CASP10	activation_PPrel	hsa:CASP3
+hsa:CASP10	activation_PPrel	hsa:CASP7
+hsa:CASP8	activation_PPrel	hsa:CASP3
+hsa:CASP8	activation_PPrel	hsa:CASP7
+hsa:CFLAR	inhibition_PPrel	hsa:CASP8
+hsa:CHUK	phosphorylation_PPrel	hsa:NFKBIA
+hsa:DAB2IP	indirect effect_PPrel	hsa:MAPK10
+hsa:DAB2IP	indirect effect_PPrel	hsa:MAPK8
+hsa:DAB2IP	indirect effect_PPrel	hsa:MAPK9
+hsa:FADD	activation_PPrel	hsa:CASP10
+hsa:FADD	activation_PPrel	hsa:CASP8
+hsa:IKBKB	phosphorylation_PPrel	hsa:NFKBIA
+hsa:IKBKG	phosphorylation_PPrel	hsa:NFKBIA
+hsa:IRF1	expression_GErel	hsa:IFNB1
+hsa:ITCH	inhibition_PPrel	hsa:CFLAR
+hsa:LTA	activation_PPrel	hsa:TNFRSF1B
+hsa:MAP2K1	phosphorylation_PPrel	hsa:MAPK1
+hsa:MAP2K1	phosphorylation_PPrel	hsa:MAPK3
+hsa:MAP2K3	phosphorylation_PPrel	hsa:MAPK11
+hsa:MAP2K3	phosphorylation_PPrel	hsa:MAPK12
+hsa:MAP2K3	phosphorylation_PPrel	hsa:MAPK13
+hsa:MAP2K3	phosphorylation_PPrel	hsa:MAPK14
+hsa:MAP2K4	phosphorylation_PPrel	hsa:MAPK10
+hsa:MAP2K4	phosphorylation_PPrel	hsa:MAPK8
+hsa:MAP2K4	phosphorylation_PPrel	hsa:MAPK9
+hsa:MAP2K6	phosphorylation_PPrel	hsa:MAPK11
+hsa:MAP2K6	phosphorylation_PPrel	hsa:MAPK12
+hsa:MAP2K6	phosphorylation_PPrel	hsa:MAPK13
+hsa:MAP2K6	phosphorylation_PPrel	hsa:MAPK14
+hsa:MAP2K7	phosphorylation_PPrel	hsa:MAPK10
+hsa:MAP2K7	phosphorylation_PPrel	hsa:MAPK8
+hsa:MAP2K7	phosphorylation_PPrel	hsa:MAPK9
+hsa:MAP3K14	phosphorylation_PPrel	hsa:CHUK
+hsa:MAP3K14	phosphorylation_PPrel	hsa:IKBKB
+hsa:MAP3K14	phosphorylation_PPrel	hsa:IKBKG
+hsa:MAP3K5	activation_PPrel	hsa:MAP2K4
+hsa:MAP3K5	activation_PPrel	hsa:MAP2K7
+hsa:MAP3K7	phosphorylation_PPrel	hsa:IKBKB
+hsa:MAP3K7	phosphorylation_PPrel	hsa:MAP2K3
+hsa:MAP3K7	phosphorylation_PPrel	hsa:MAP2K4
+hsa:MAP3K7	phosphorylation_PPrel	hsa:MAP2K6
+hsa:MAP3K7	phosphorylation_PPrel	hsa:MAP2K7
+hsa:MAP3K8	activation_PPrel	hsa:MAP2K4
+hsa:MAP3K8	activation_PPrel	hsa:MAP2K7
+hsa:MAP3K8	phosphorylation_PPrel	hsa:MAP2K1
+hsa:MAPK1	indirect effect_PPrel	hsa:RPS6KA4
+hsa:MAPK1	indirect effect_PPrel	hsa:RPS6KA5
+hsa:MAPK10	indirect effect_PPrel	hsa:FOS
+hsa:MAPK10	indirect effect_PPrel,phosphorylation_PPrel	hsa:JUN
+hsa:MAPK10	phosphorylation_PPrel	hsa:ITCH
+hsa:MAPK11	activation_PPrel	hsa:CEBPB
+hsa:MAPK11	indirect effect_PPrel	hsa:RPS6KA4
+hsa:MAPK11	indirect effect_PPrel	hsa:RPS6KA5
+hsa:MAPK12	activation_PPrel	hsa:CEBPB
+hsa:MAPK12	indirect effect_PPrel	hsa:RPS6KA4
+hsa:MAPK12	indirect effect_PPrel	hsa:RPS6KA5
+hsa:MAPK13	activation_PPrel	hsa:CEBPB
+hsa:MAPK13	indirect effect_PPrel	hsa:RPS6KA4
+hsa:MAPK13	indirect effect_PPrel	hsa:RPS6KA5
+hsa:MAPK14	activation_PPrel	hsa:CEBPB
+hsa:MAPK14	indirect effect_PPrel	hsa:RPS6KA4
+hsa:MAPK14	indirect effect_PPrel	hsa:RPS6KA5
+hsa:MAPK3	indirect effect_PPrel	hsa:RPS6KA4
+hsa:MAPK3	indirect effect_PPrel	hsa:RPS6KA5
+hsa:MAPK8	indirect effect_PPrel	hsa:FOS
+hsa:MAPK8	indirect effect_PPrel,phosphorylation_PPrel	hsa:JUN
+hsa:MAPK8	phosphorylation_PPrel	hsa:ITCH
+hsa:MAPK9	indirect effect_PPrel	hsa:FOS
+hsa:MAPK9	indirect effect_PPrel,phosphorylation_PPrel	hsa:JUN
+hsa:MAPK9	phosphorylation_PPrel	hsa:ITCH
+hsa:MLKL	activation_PPrel	hsa:PGAM5
+hsa:NFKB1	expression_GErel	hsa:CFLAR
+hsa:NFKBIA	dissociation_PPrel	hsa:NFKB1
+hsa:NFKBIA	dissociation_PPrel	hsa:RELA
+hsa:PGAM5	activation_PPrel,dephosphorylation_PPrel	hsa:DNM1L
+hsa:PIK3CA	indirect effect_PPrel,phosphorylation_PPrel	hsa:AKT1
+hsa:PIK3CA	indirect effect_PPrel,phosphorylation_PPrel	hsa:AKT2
+hsa:PIK3CA	indirect effect_PPrel,phosphorylation_PPrel	hsa:AKT3
+hsa:PIK3CB	indirect effect_PPrel,phosphorylation_PPrel	hsa:AKT1
+hsa:PIK3CB	indirect effect_PPrel,phosphorylation_PPrel	hsa:AKT2
+hsa:PIK3CB	indirect effect_PPrel,phosphorylation_PPrel	hsa:AKT3
+hsa:PIK3CD	indirect effect_PPrel,phosphorylation_PPrel	hsa:AKT1
+hsa:PIK3CD	indirect effect_PPrel,phosphorylation_PPrel	hsa:AKT2
+hsa:PIK3CD	indirect effect_PPrel,phosphorylation_PPrel	hsa:AKT3
+hsa:PIK3R1	indirect effect_PPrel,phosphorylation_PPrel	hsa:AKT1
+hsa:PIK3R1	indirect effect_PPrel,phosphorylation_PPrel	hsa:AKT2
+hsa:PIK3R1	indirect effect_PPrel,phosphorylation_PPrel	hsa:AKT3
+hsa:PIK3R2	indirect effect_PPrel,phosphorylation_PPrel	hsa:AKT1
+hsa:PIK3R2	indirect effect_PPrel,phosphorylation_PPrel	hsa:AKT2
+hsa:PIK3R2	indirect effect_PPrel,phosphorylation_PPrel	hsa:AKT3
+hsa:PIK3R3	indirect effect_PPrel,phosphorylation_PPrel	hsa:AKT1
+hsa:PIK3R3	indirect effect_PPrel,phosphorylation_PPrel	hsa:AKT2
+hsa:PIK3R3	indirect effect_PPrel,phosphorylation_PPrel	hsa:AKT3
+hsa:RELA	expression_GErel	hsa:CFLAR
+hsa:RIPK1	activation_PPrel	hsa:IKBKG
+hsa:RIPK1	activation_PPrel	hsa:MAP2K3
+hsa:RIPK1	binding/association_PPrel	hsa:RIPK3
+hsa:RIPK3	phosphorylation_PPrel	hsa:MLKL
+hsa:RPS6KA4	activation_PPrel	hsa:ATF2
+hsa:RPS6KA4	activation_PPrel	hsa:ATF4
+hsa:RPS6KA4	activation_PPrel	hsa:ATF6B
+hsa:RPS6KA4	activation_PPrel	hsa:CREB1
+hsa:RPS6KA4	activation_PPrel	hsa:CREB3
+hsa:RPS6KA4	activation_PPrel	hsa:CREB3L1
+hsa:RPS6KA4	activation_PPrel	hsa:CREB3L2
+hsa:RPS6KA4	activation_PPrel	hsa:CREB3L3
+hsa:RPS6KA4	activation_PPrel	hsa:CREB3L4
+hsa:RPS6KA4	activation_PPrel	hsa:CREB5
+hsa:RPS6KA5	activation_PPrel	hsa:ATF2
+hsa:RPS6KA5	activation_PPrel	hsa:ATF4
+hsa:RPS6KA5	activation_PPrel	hsa:ATF6B
+hsa:RPS6KA5	activation_PPrel	hsa:CREB1
+hsa:RPS6KA5	activation_PPrel	hsa:CREB3
+hsa:RPS6KA5	activation_PPrel	hsa:CREB3L1
+hsa:RPS6KA5	activation_PPrel	hsa:CREB3L2
+hsa:RPS6KA5	activation_PPrel	hsa:CREB3L3
+hsa:RPS6KA5	activation_PPrel	hsa:CREB3L4
+hsa:RPS6KA5	activation_PPrel	hsa:CREB5
+hsa:TNF	activation_PPrel	hsa:TNFRSF1A
+hsa:TNF	activation_PPrel	hsa:TNFRSF1B
+hsa:TNFRSF1A	activation_PPrel	hsa:TRADD
+hsa:TNFRSF1A	dissociation_PPrel	hsa:BAG4
+hsa:TNFRSF1B	activation_PPrel	hsa:DAB2IP
+hsa:TNFRSF1B	activation_PPrel	hsa:TRAF2
+hsa:TNFRSF1B	activation_PPrel,indirect effect_PPrel	hsa:IRF1
+hsa:TRADD	activation_PPrel	hsa:FADD
+hsa:TRAF2	activation_PPrel	hsa:BIRC2
+hsa:TRAF2	activation_PPrel	hsa:BIRC3
+hsa:TRAF2	activation_PPrel	hsa:MAP3K14
+hsa:TRAF2	activation_PPrel	hsa:MAP3K7
+hsa:TRAF2	activation_PPrel	hsa:PIK3CA
+hsa:TRAF2	activation_PPrel	hsa:PIK3CB
+hsa:TRAF2	activation_PPrel	hsa:PIK3CD
+hsa:TRAF2	activation_PPrel	hsa:PIK3R1
+hsa:TRAF2	activation_PPrel	hsa:PIK3R2
+hsa:TRAF2	activation_PPrel	hsa:PIK3R3
+hsa:TRAF5	activation_PPrel	hsa:BIRC2
+hsa:TRAF5	activation_PPrel	hsa:BIRC3
+hsa:TRAF5	activation_PPrel	hsa:MAP3K14
+hsa:TRAF5	activation_PPrel	hsa:MAP3K7
