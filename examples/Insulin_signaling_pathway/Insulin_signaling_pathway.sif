@@ -105,6 +105,8 @@ hsa:HRAS	activation_PPrel	hsa:RAF1
 hsa:IKBKB	inhibition_PPrel,phosphorylation_PPrel	hsa:IRS1
 hsa:IKBKB	inhibition_PPrel,phosphorylation_PPrel	hsa:IRS2
 hsa:IKBKB	inhibition_PPrel,phosphorylation_PPrel	hsa:IRS4
+hsa:INPP5A	inhibition_PCrel	cpd:Phosphatidylinositol-3,4,5-trisphosphate
+hsa:INPP5J	inhibition_PCrel	cpd:Phosphatidylinositol-3,4,5-trisphosphate
 hsa:INPP5K	inhibition_PCrel	cpd:Phosphatidylinositol-3,4,5-trisphosphate
 hsa:INPPL1	inhibition_PCrel	cpd:Phosphatidylinositol-3,4,5-trisphosphate
 hsa:INS	activation_PPrel	hsa:INSR

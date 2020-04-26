@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE pathway SYSTEM "https://www.kegg.jp/kegg/xml/KGML_v0.7.2_.dtd">
-<!-- Creation date: Mar 14, 2018 15:28:12 +0900 (GMT+9) -->
+<!-- Creation date: Mar 12, 2020 13:35:24 +0900 (GMT+9) -->
 <pathway name="path:hsa04910" org="hsa" number="04910"
          title="Insulin signaling pathway"
          image="https://www.kegg.jp/kegg/pathway/hsa/hsa04910.png"
@@ -10,9 +10,9 @@
         <graphics name="TSC1, LAM, TSC" fgcolor="#000000" bgcolor="#BFFFBF"
              type="rectangle" x="616" y="492" width="46" height="17"/>
     </entry>
-    <entry id="8" name="hsa:51763" type="gene"
-        link="https://www.kegg.jp/dbget-bin/www_bget?hsa:51763">
-        <graphics name="INPP5K, MDCCAID, PPS, SKIP" fgcolor="#000000" bgcolor="#BFFFBF"
+    <entry id="8" name="hsa:27124 hsa:3632 hsa:51763" type="gene"
+        link="https://www.kegg.jp/dbget-bin/www_bget?hsa:27124+hsa:3632+hsa:51763">
+        <graphics name="INPP5J, INPP5, PIB5PA, PIPP..." fgcolor="#000000" bgcolor="#BFFFBF"
              type="rectangle" x="334" y="241" width="46" height="17"/>
     </entry>
     <entry id="9" name="hsa:3636" type="gene"
@@ -157,7 +157,7 @@
     </entry>
     <entry id="37" name="hsa:3265 hsa:3845 hsa:4893" type="gene"
         link="https://www.kegg.jp/dbget-bin/www_bget?hsa:3265+hsa:3845+hsa:4893">
-        <graphics name="HRAS, C-BAS/HAS, C-H-RAS, C-HA-RAS1, CTLO, H-RASIDX, HAMSV, HRAS1, KRAS, KRAS2, Ki-Ras, RASH1, RASK2, c-K-ras, c-Ki-ras, p21ras..." fgcolor="#000000" bgcolor="#BFFFBF"
+        <graphics name="HRAS, C-BAS/HAS, C-H-RAS, C-HA-RAS1, CTLO, H-RASIDX, HAMSV, HRAS1, RASH1, p21ras..." fgcolor="#000000" bgcolor="#BFFFBF"
              type="rectangle" x="426" y="693" width="46" height="17"/>
     </entry>
     <entry id="38" name="hsa:1977 hsa:253314 hsa:9470" type="gene"

@@ -42,7 +42,7 @@
     </entry>
     <entry id="15" name="hsa:9131" type="gene"
         link="https://www.kegg.jp/dbget-bin/www_bget?hsa:9131">
-        <graphics name="AIFM1, AIF, AUNX1, CMT2D, CMTX4, COWCK, COXPD6, DFNX5, NADMR, NAMSD, PDCD8" fgcolor="#000000" bgcolor="#BFFFBF"
+        <graphics name="AIFM1, AIF, AUNX1, CMT2D, CMTX4, COWCK, COXPD6, DFNX5, NADMR, NAMSD, PDCD8, SEMDHL" fgcolor="#000000" bgcolor="#BFFFBF"
              type="rectangle" x="1101" y="713" width="46" height="17"/>
     </entry>
     <entry id="16" name="hsa:596" type="gene"
@@ -82,7 +82,7 @@
     </entry>
     <entry id="23" name="hsa:4790 hsa:5970" type="gene"
         link="https://www.kegg.jp/dbget-bin/www_bget?hsa:4790+hsa:5970">
-        <graphics name="NFKB1, CVID12, EBP-1, KBF1, NF-kB1, NF-kappa-B1, NF-kappaB, NFKB-p105, NFKB-p50, NFkappaB, p105, p50..." fgcolor="#000000" bgcolor="#BFFFBF"
+        <graphics name="NFKB1, CVID12, EBP-1, KBF1, NF-kB, NF-kB1, NF-kappa-B1, NF-kappaB, NFKB-p105, NFKB-p50, NFkappaB, p105, p50..." fgcolor="#000000" bgcolor="#BFFFBF"
              type="rectangle" x="832" y="901" width="46" height="17"/>
     </entry>
     <entry id="24" name="hsa:329 hsa:330 hsa:331 hsa:332" type="gene"
@@ -407,7 +407,7 @@
     </entry>
     <entry id="163" name="hsa:3725" type="gene"
         link="https://www.kegg.jp/dbget-bin/www_bget?hsa:3725">
-        <graphics name="JUN, AP-1, AP1, c-Jun, p39" fgcolor="#000000" bgcolor="#BFFFBF"
+        <graphics name="JUN, AP-1, AP1, c-Jun, cJUN, p39" fgcolor="#000000" bgcolor="#BFFFBF"
              type="rectangle" x="1277" y="798" width="46" height="17"/>
     </entry>
     <entry id="164" name="hsa:2353" type="gene"
@@ -572,7 +572,7 @@
     </entry>
     <entry id="277" name="hsa:3265 hsa:3845 hsa:4893" type="gene"
         link="https://www.kegg.jp/dbget-bin/www_bget?hsa:3265+hsa:3845+hsa:4893">
-        <graphics name="HRAS, C-BAS/HAS, C-H-RAS, C-HA-RAS1, CTLO, H-RASIDX, HAMSV, HRAS1, KRAS, KRAS2, Ki-Ras, RASH1, RASK2, c-K-ras, c-Ki-ras, p21ras..." fgcolor="#000000" bgcolor="#BFFFBF"
+        <graphics name="HRAS, C-BAS/HAS, C-H-RAS, C-HA-RAS1, CTLO, H-RASIDX, HAMSV, HRAS1, RASH1, p21ras..." fgcolor="#000000" bgcolor="#BFFFBF"
              type="rectangle" x="287" y="969" width="46" height="17"/>
     </entry>
     <entry id="278" name="hsa:5894" type="gene"

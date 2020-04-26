@@ -2252,7 +2252,7 @@ hsa:10331	hsa:B3GNT3
 hsa:10332	hsa:CLEC4M
 hsa:10333	hsa:TLR6
 hsa:103344718	hsa:HOTS
-hsa:10335	hsa:MRVI1
+hsa:10335	hsa:IRAG1
 hsa:10336	hsa:PCGF3
 hsa:10342	hsa:TFG
 hsa:10343	hsa:PKDREJ
@@ -2447,6 +2447,7 @@ hsa:10537	hsa:UBD
 hsa:105371045	hsa:PERCC1
 hsa:105371242	hsa:PPIAL4H
 hsa:105371346	hsa:CPHXL
+hsa:105372267	hsa:NFILZ
 hsa:105372280	hsa:GNG14
 hsa:105372883	hsa:LINC02767
 hsa:105372978	hsa:LINC01638
@@ -3286,6 +3287,7 @@ hsa:11253	hsa:MAN1B1
 hsa:11254	hsa:SLC6A14
 hsa:11255	hsa:HRH3
 hsa:112574	hsa:SNX18
+hsa:112577461	hsa:OOSP3
 hsa:11258	hsa:DCTN3
 hsa:11259	hsa:FILIP1L
 hsa:11260	hsa:XPOT
@@ -4754,6 +4756,7 @@ hsa:143458	hsa:LDLRAD3
 hsa:143471	hsa:PSMA8
 hsa:143496	hsa:OR52B4
 hsa:1435	hsa:CSF1
+hsa:143501	hsa:C11orf40
 hsa:143502	hsa:OR52I2
 hsa:143503	hsa:OR51E1
 hsa:143570	hsa:XRRA1
@@ -4966,7 +4969,7 @@ hsa:147807	hsa:ZNF524
 hsa:147808	hsa:ZNF784
 hsa:147837	hsa:ZNF563
 hsa:147841	hsa:SPC24
-hsa:147872	hsa:CCDC155
+hsa:147872	hsa:KASH5
 hsa:1479	hsa:CSTF3
 hsa:147906	hsa:DACT3
 hsa:147912	hsa:SIX5
@@ -5432,7 +5435,7 @@ hsa:160492	hsa:LMNTD1
 hsa:1605	hsa:DAG1
 hsa:160518	hsa:DENND5B
 hsa:1606	hsa:DGKA
-hsa:160622	hsa:GRASP
+hsa:160622	hsa:TAMALIN
 hsa:1607	hsa:DGKB
 hsa:160728	hsa:SLC5A8
 hsa:160760	hsa:PPTC7
@@ -6079,7 +6082,7 @@ hsa:200728	hsa:TMEM17
 hsa:200734	hsa:SPRED2
 hsa:200765	hsa:TIGD1
 hsa:200810	hsa:ALG1L
-hsa:200844	hsa:C3orf67
+hsa:200844	hsa:CFAP20DC
 hsa:200845	hsa:KCTD6
 hsa:200879	hsa:LIPH
 hsa:200894	hsa:ARL13B
@@ -6560,7 +6563,7 @@ hsa:222171	hsa:PRR15
 hsa:222183	hsa:SRRM3
 hsa:222194	hsa:RSBN1L
 hsa:2222	hsa:FDFT1
-hsa:222223	hsa:KIAA1324L
+hsa:222223	hsa:ELAPOR2
 hsa:222229	hsa:LRWD1
 hsa:222234	hsa:FAM185A
 hsa:222235	hsa:FBXL13
@@ -9782,7 +9785,6 @@ hsa:338755	hsa:OR2AG2
 hsa:338761	hsa:C1QL4
 hsa:338773	hsa:TMEM119
 hsa:338785	hsa:KRT79
-hsa:338809	hsa:C12orf74
 hsa:338811	hsa:TAFA2
 hsa:338821	hsa:SLCO1B7
 hsa:338872	hsa:C1QTNF9
@@ -10001,7 +10003,7 @@ hsa:3437	hsa:IFIT3
 hsa:343702	hsa:XKR7
 hsa:3439	hsa:IFNA1
 hsa:343930	hsa:MSGN1
-hsa:343990	hsa:KIAA1211L
+hsa:343990	hsa:CRACDL
 hsa:344	hsa:APOC2
 hsa:3440	hsa:IFNA2
 hsa:344018	hsa:FIGLA
@@ -10697,7 +10699,6 @@ hsa:388199	hsa:PRR25
 hsa:3882	hsa:KRT32
 hsa:388228	hsa:SBK1
 hsa:388272	hsa:C16orf87
-hsa:388276	hsa:C16orf97
 hsa:388284	hsa:C16orf86
 hsa:3883	hsa:KRT33A
 hsa:388323	hsa:GLTPD2
@@ -11134,6 +11135,7 @@ hsa:400745	hsa:SH2D5
 hsa:400746	hsa:NCMAP
 hsa:400757	hsa:C1orf141
 hsa:400793	hsa:C1orf226
+hsa:400797	hsa:CLEC20A
 hsa:4008	hsa:LMO7
 hsa:400818	hsa:NBPF9
 hsa:400823	hsa:FAM177B
@@ -11237,7 +11239,7 @@ hsa:403277	hsa:OR5K3
 hsa:403278	hsa:OR5K4
 hsa:403282	hsa:OR6C65
 hsa:403284	hsa:OR6C68
-hsa:4033	hsa:LRMP
+hsa:4033	hsa:IRAG2
 hsa:403313	hsa:PLPP6
 hsa:403314	hsa:APOBEC4
 hsa:403341	hsa:ZBTB34
@@ -15242,6 +15244,7 @@ hsa:57496	hsa:MRTFB
 hsa:57497	hsa:LRFN2
 hsa:57498	hsa:KIDINS220
 hsa:575	hsa:ADGRB1
+hsa:57501	hsa:CFAP92
 hsa:57502	hsa:NLGN4X
 hsa:57504	hsa:MTA3
 hsa:57505	hsa:AARS2
@@ -15270,7 +15273,7 @@ hsa:57531	hsa:HACE1
 hsa:57532	hsa:NUFIP2
 hsa:57533	hsa:TBC1D14
 hsa:57534	hsa:MIB1
-hsa:57535	hsa:EIG121
+hsa:57535	hsa:ELAPOR1
 hsa:57537	hsa:SORCS2
 hsa:57538	hsa:ALPK3
 hsa:57539	hsa:WDR35
@@ -15770,7 +15773,7 @@ hsa:6023	hsa:RMRP
 hsa:6029	hsa:RN7SL1
 hsa:60312	hsa:AFAP1
 hsa:60313	hsa:GPBP1L1
-hsa:60314	hsa:C12orf10
+hsa:60314	hsa:MYG1
 hsa:60343	hsa:FAM3A
 hsa:6035	hsa:RNASE1
 hsa:6036	hsa:RNASE2
@@ -16566,7 +16569,7 @@ hsa:64748	hsa:PLPPR2
 hsa:64750	hsa:SMURF2
 hsa:64753	hsa:CCDC136
 hsa:64754	hsa:SMYD3
-hsa:64755	hsa:C16orf58
+hsa:64755	hsa:RUSF1
 hsa:64756	hsa:ATPAF1
 hsa:64757	hsa:MTARC1
 hsa:647589	hsa:ANHX
@@ -18842,7 +18845,7 @@ hsa:79931	hsa:TNIP3
 hsa:79932	hsa:KIAA0319L
 hsa:79933	hsa:SYNPO2L
 hsa:79934	hsa:COQ8B
-hsa:79935	hsa:CNTD2
+hsa:79935	hsa:CCNP
 hsa:79937	hsa:CNTNAP3
 hsa:79939	hsa:SLC35E1
 hsa:7994	hsa:KAT6A
@@ -20726,7 +20729,7 @@ hsa:8987	hsa:STBD1
 hsa:89870	hsa:TRIM15
 hsa:89872	hsa:AQP10
 hsa:89874	hsa:SLC25A21
-hsa:89876	hsa:MAATS1
+hsa:89876	hsa:CFAP91
 hsa:8988	hsa:HSPB3
 hsa:89882	hsa:TPD52L3
 hsa:89884	hsa:LHX4
@@ -21749,6 +21752,7 @@ hsa:9706	hsa:ULK2
 hsa:9708	hsa:PCDHGA8
 hsa:9709	hsa:HERPUD1
 hsa:971	hsa:CD72
+hsa:9710	hsa:GARRE1
 hsa:9711	hsa:RUBCN
 hsa:9712	hsa:USP6NL
 hsa:9715	hsa:FAM131B

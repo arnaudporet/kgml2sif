@@ -479,7 +479,7 @@ cpd:C00516	cpd:Fibronectin
 cpd:C00517	cpd:Hexadecanal
 cpd:C00518	cpd:Hyaluronate
 cpd:C00519	cpd:Hypotaurine
-cpd:C00521	cpd:(-)-Limonene
+cpd:C00521	cpd:(S)-Limonene
 cpd:C00522	cpd:(R)-Pantoate
 cpd:C00523	cpd:Androsterone
 cpd:C00524	cpd:Cytochrome c
@@ -632,7 +632,7 @@ cpd:C00698	cpd:Cl-
 cpd:C00700	cpd:XTP
 cpd:C00701	cpd:Base
 cpd:C00703	cpd:Mercury(2+)
-cpd:C00704	cpd:O2.-
+cpd:C00704	cpd:Superoxide
 cpd:C00705	cpd:dCDP
 cpd:C00706	cpd:Amine
 cpd:C00707	cpd:Xylan
@@ -1979,7 +1979,7 @@ cpd:C02445	cpd:Nonane-4,6-dione
 cpd:C02446	cpd:O-Alkylglycerone
 cpd:C02447	cpd:O-Methylated RNA
 cpd:C02451	cpd:Pent-2-enoyl-CoA
-cpd:C02452	cpd:Perillyl alcohol
+cpd:C02452	cpd:(-)-Perillyl alcohol
 cpd:C02453	cpd:Phenolic steroid
 cpd:C02454	cpd:Phenylenediamine
 cpd:C02455	cpd:1-Phenylethylamine
@@ -2201,7 +2201,7 @@ cpd:C02761	cpd:beta-L-Arabinoside
 cpd:C02762	cpd:beta-Limit dextrin
 cpd:C02763	cpd:2-Hydroxy-3-phenylpropenoate
 cpd:C02764	cpd:tRNA pseudouridine
-cpd:C02765	cpd:(+)-Pseudoephedrine
+cpd:C02765	cpd:(+)-(1S,2S)-Pseudoephedrine
 cpd:C02766	cpd:(R)-Ureidoglycolate
 cpd:C02768	cpd:(Glycerophosphate)n
 cpd:C02771	cpd:1,2-Dihydrosantonin
@@ -4475,7 +4475,7 @@ cpd:C06094	cpd:Gibberellin A53
 cpd:C06095	cpd:Gibberellin A44 diacid
 cpd:C06096	cpd:Gibberellin A29
 cpd:C06098	cpd:Zeaxanthin
-cpd:C06099	cpd:d-Limonene
+cpd:C06099	cpd:(R)-Limonene
 cpd:C06102	cpd:Adipate semialdehyde
 cpd:C06103	cpd:6-Hydroxyhexanoic acid
 cpd:C06104	cpd:Adipate
@@ -13410,7 +13410,6 @@ cpd:C16732	cpd:[Thyroglobulin]-3-iodo-L-tyrosine
 cpd:C16733	cpd:[Thyroglobulin]-L-tyrosine
 cpd:C16734	cpd:Thyroglobulin dehydroalanine
 cpd:C16735	cpd:Corynantheal
-cpd:C16736	cpd:Thiol-containing reductant
 cpd:C16737	cpd:5-Deoxy-D-glucuronate
 cpd:C16738	cpd:Sulfuric monoester
 cpd:C16739	cpd:L-Arginyl-protein
@@ -16749,6 +16748,7 @@ cpd:C20251	cpd:1-Keto-D-chiro-inositol
 cpd:C20252	cpd:5-Androstene-3,17-dione
 cpd:C20253	cpd:Aminoacrylate
 cpd:C20254	cpd:Ureidoacrylate
+cpd:C20256	cpd:Methylureidoacrylate
 cpd:C20258	cpd:(2S,4S)-4-Hydroxy-2,3,4,5-tetrahydrodipicolinate
 cpd:C20259	cpd:Mertansine
 cpd:C20260	cpd:(+)-Thujan-3-one
@@ -17138,6 +17138,7 @@ cpd:C20661	cpd:7-(2-Hydroxy-3-amino-3-carboxypropyl)wyosine in tRNA(Phe)
 cpd:C20662	cpd:Hydroxywybutosine in tRNA(Phe)
 cpd:C20663	cpd:L-Histidine-[translation elongation factor 2]
 cpd:C20664	cpd:(-)-Bornyl diphosphate
+cpd:C20665	cpd:Aryl-carrier protein
 cpd:C20666	cpd:5-Oxo-delta-bilirubin
 cpd:C20667	cpd:15-Oxo-beta-bilirubin
 cpd:C20668	cpd:3-Dehydro-D-glucose 6-phosphate
@@ -17350,6 +17351,9 @@ cpd:C20879	cpd:Very-long-chain trans-2,3-dehydroacyl-CoA
 cpd:C20880	cpd:UDP-N-acetylmuramoyl-L-alanyl-D-glutamyl-LL-2,6-diaminopimeloyl-D-alanyl-D-lactate
 cpd:C20881	cpd:Undecaprenyl-diphospho-N-acetylmuramoyl-(N-acetylglucosamine)-L-alanyl-D-glutamyl-LL-2,6-diaminopimeloyl-D-alanyl-D-Lactate
 cpd:C20882	cpd:Undecaprenyl-diphospho-N-acetylmuramoyl-(N-acetylglucosamine)-L-alanyl-D-glutamyl-LL-2,6-diaminopimeloyl-(glycyl)-D-alanyl-D-lactate
+cpd:C20883	cpd:3,4-Dihydroxybenzoyl-[aryl-carrier protein]
+cpd:C20884	cpd:(3,4-Dihydroxybenzoyl)adenylate
+cpd:C20885	cpd:N-Citryl-spermidine
 cpd:C20886	cpd:UDP-N-acetylmuramoyl-L-alanyl-gamma-D-glutamyl-LL-2,6-diaminopimelate
 cpd:C20887	cpd:beta-D-Mannosyl-1,4-N-acetyl-D-glucosamine
 cpd:C20888	cpd:Cellobionate
@@ -17415,6 +17419,7 @@ cpd:C20948	cpd:LysW-L-glutamate
 cpd:C20949	cpd:LysW-L-glutamyl 5-phosphate
 cpd:C20950	cpd:LysW-L-glutamate 5-semialdehyde
 cpd:C20951	cpd:LysW-L-ornithine
+cpd:C20952	cpd:N1-(3,4-Dihydroxybenzoyl)-N8-citryl spermidine
 cpd:C20953	cpd:3-[(4R)-4-Hydroxycyclohexa-1,5-dien-1-yl]-2-oxopropanoate
 cpd:C20954	cpd:(5-Formylfuran-3-yl)methyl phosphate
 cpd:C20955	cpd:3-(Methylthio)acryloyl-CoA
@@ -17501,7 +17506,7 @@ cpd:C21036	cpd:N-Acetyl-L-altrosamine
 cpd:C21037	cpd:D-Alluronic acid
 cpd:C21038	cpd:D-Allosamine
 cpd:C21039	cpd:N-Acetyl-D-allosamine
-cpd:C21040	cpd:Apiose
+cpd:C21040	cpd:D-Apiofuranose
 cpd:C21041	cpd:Bacillosamine
 cpd:C21042	cpd:D-glycero-D-manno-Heptose
 cpd:C21043	cpd:L-glycero-D-manno-Heptose
@@ -17731,6 +17736,7 @@ cpd:C21267	cpd:6'-Oxogentamicin X2
 cpd:C21268	cpd:6'-Oxo-G418
 cpd:C21269	cpd:Antibiotic JI-20Ba
 cpd:C21270	cpd:Gentamicin C2a
+cpd:C21272	cpd:3-(4-Aminophenyl)pyruvate
 cpd:C21273	cpd:Benfluralin
 cpd:C21275	cpd:Mycolactone C
 cpd:C21276	cpd:Mycolactone D
@@ -18170,7 +18176,7 @@ cpd:C21716	cpd:beta-Geranylfarnesene
 cpd:C21717	cpd:beta-Hexaprene
 cpd:C21718	cpd:beta-Heptaprene
 cpd:C21719	cpd:2-(L-Cystein-S-yl)-2-(1H-indol-3-yl)acetonitrile
-cpd:C21720	cpd:(13R)-9,13-Epoxylabda-14-ene
+cpd:C21720	cpd:(13R)-9,13-Epoxylabd-14-ene
 cpd:C21721	cpd:Camalexin
 cpd:C21722	cpd:(R)-Dihydrocamalexate
 cpd:C21723	cpd:Biliverdin-IX-delta
@@ -18442,6 +18448,7 @@ cpd:C22000	cpd:(R)-3-(Tetradecanoyloxy)tetradecanoic acid
 cpd:C22001	cpd:(R)-3-Hydroxymyristic acid
 cpd:C22002	cpd:Lipid IIB
 cpd:C22003	cpd:(S)-2-Hydroxymyristate-modified lipid A
+cpd:C22004	cpd:N8,N'8-Citryl-bis(spermidine)
 cpd:C22005	cpd:2-Hydroxyflavanone
 cpd:C22006	cpd:(R)-(Indol-3-yl)lactate
 cpd:C22007	cpd:Sideretin
@@ -18506,6 +18513,7 @@ cpd:C22065	cpd:2-Oxo-3-(phosphooxy)propyl 3-oxoalkanoate
 cpd:C22066	cpd:2'-Hydroxy-beta-oxodihydrochalcone
 cpd:C22067	cpd:3'-(beta-D-Glucopyranosyl)-2'-hydroxy-beta-oxodihydrochalcone
 cpd:C22068	cpd:H. pylori KDO2-lipid IVA
+cpd:C22069	cpd:N1-(3,4-Dihydroxybenzoyl)-N8,N'8-citryl-bis(spermidine)
 cpd:C22070	cpd:2,4-Dihydroxycinnamoyl-CoA
 cpd:C22071	cpd:Pterocarpan
 cpd:C22072	cpd:2-[(L-Alanin-3-ylcarbamoyl)methyl]-2-hydroxybutanedioate
@@ -18568,7 +18576,6 @@ cpd:C22129	cpd:Ginsenoside Rh1
 cpd:C22130	cpd:Oleanolate 3-O-beta-D-glucoside
 cpd:C22131	cpd:3''-O-Acetyl-ADP-D-ribose
 cpd:C22132	cpd:(Stearoyl)adenylate
-cpd:C22133	cpd:Holo-[(hydroxy)phthioceranic acid synthase]
 cpd:C22134	cpd:Stearoyl-[(hydroxy)phthioceranic acid synthase]
 cpd:C22135	cpd:(Palmitoyl)adenylate
 cpd:C22136	cpd:Zymosterone
@@ -18649,17 +18656,21 @@ cpd:C22210	cpd:4-Amino-4-deoxyprephenate
 cpd:C22211	cpd:Marinolic acid
 cpd:C22212	cpd:Marinoloyl-CoA
 cpd:C22213	cpd:Pseudomonic acid
-cpd:C22214	cpd:Pseuodomonoyl-CoA
+cpd:C22214	cpd:Pseudomonoyl-CoA
 cpd:C22215	cpd:Long-chain 3-hydroxysterol ester
 cpd:C22216	cpd:Cytidine 5'-{[hydroxy(2-hydroxyethyl)phosphonoyl]phosphate}
 cpd:C22217	cpd:Cytidine 5'-{[hydroxy(2-hydroxypropyl)phosphonoyl]phosphate}
 cpd:C22218	cpd:D-Apionolactone
 cpd:C22219	cpd:D-Apionate
+cpd:C22220	cpd:3-Oxo-D-isoapionate
 cpd:C22221	cpd:7-Deoxycylindrospermopsin
 cpd:C22222	cpd:7-epi-Cylindrospermopsin
+cpd:C22223	cpd:N-Methyl-L-proline
 cpd:C22224	cpd:(Indol-3-yl)acetyl-L-aspartate
 cpd:C22225	cpd:(S)-8-oxocitronellyl enol
 cpd:C22226	cpd:Icosanoyl-[(phenol)carboxyphthiodiolenone synthase]
+cpd:C22227	cpd:[Sulfatase]-L-serine
+cpd:C22228	cpd:(2R)-2-Hydroxy fatty acid
 cpd:C22229	cpd:[alpha-D-Man-(1->3)-alpha-D-Man-(1->3)-alpha-D-Man-(1->2)-alpha-D-Man-(1->2)]n-alpha-D-Man-(1->3)-alpha-D-Man-(1->3)-alpha-D-Man-(1->3)-alpha-D-GlcNAc-diphospho-ditrans,octacis-undecaprenol
 cpd:C22230	cpd:(1->6)-alpha-D-Glucan containing a (1->2)-alpha-D-glucose branch
 cpd:C22231	cpd:Amicoumacin A
@@ -18667,7 +18678,26 @@ cpd:C22232	cpd:Amicoumacin A 2-phosphate
 cpd:C22233	cpd:(Salicyl)adenylate
 cpd:C22234	cpd:8-Oxo-GTP
 cpd:C22235	cpd:8-Oxo-GDP
+cpd:C22236	cpd:3-(1H-Indol-3-yl)propanoate
 cpd:C22237	cpd:Glycerophosphoserine
+cpd:C22238	cpd:FMN-N5-oxide
+cpd:C22239	cpd:4a-Hydroxy-5,6,7,8-tetrahydropteridine
+cpd:C22240	cpd:N-Acetyl-6-deoxy-L-altrosamine
+cpd:C22241	cpd:N-Acetyl-6-deoxy-D-talosamine
+cpd:C22242	cpd:Acofriose
+cpd:C22243	cpd:L-Acofriose
+cpd:C22244	cpd:Ascarylose
+cpd:C22257	cpd:dTDP-3-acetamido-3,6-dideoxy-alpha-D-glucose
+cpd:C22263	cpd:(S)-2-(Methylamino)-1-phenylpropan-1-one
+cpd:C22264	cpd:(L-Arginyl)adenylate
+cpd:C22265	cpd:L-Arginyl-[pcp]
+cpd:C22266	cpd:5-Methylaminomethyl-2-(S-geranyl)thiouridine34 in tRNA
+cpd:C22267	cpd:5-Methylaminomethyl-2-(Se-phospho)selenouridine34 in tRNA
+cpd:C22268	cpd:5-Methylaminomethyl-2-selenouridine34 in tRNA
+cpd:C22269	cpd:(2E)-3,7-Dimethylocta-2,6-diene-1-thiol
+cpd:C22272	cpd:(+)-Perillyl alcohol
+cpd:C22273	cpd:Petrobactin
+cpd:C22274	cpd:8-Oxo-GMP
 dr:D00001	dr:Water
 dr:D00002	dr:Nadide
 dr:D00003	dr:Oxygen
@@ -18762,7 +18792,7 @@ dr:D00092	dr:Coptis rhizome
 dr:D00093	dr:Microcrystalline cellulose
 dr:D00094	dr:Tretinoin
 dr:D00095	dr:Epinephrine
-dr:D00096	dr:D-Sorbitol
+dr:D00096	dr:Sorbitol solution
 dr:D00097	dr:Salicylic acid
 dr:D00098	dr:Camphor
 dr:D00099	dr:Cetanol
@@ -19223,7 +19253,7 @@ dr:D00555	dr:Amobarbital
 dr:D00556	dr:Aminopyrine
 dr:D00557	dr:Methaqualone
 dr:D00558	dr:Carbidopa
-dr:D00559	dr:Pramipexole hydrochloride
+dr:D00559	dr:Pramipexole dihydrochloride
 dr:D00560	dr:Pimozide
 dr:D00561	dr:Sertindole
 dr:D00562	dr:Propylthiouracil
@@ -20055,7 +20085,7 @@ dr:D01389	dr:Chlophedianol hydrochloride
 dr:D01390	dr:Isoproterenol hydrochloride
 dr:D01391	dr:Bromovalerylurea
 dr:D01392	dr:Mizoribine
-dr:D01393	dr:Piperazine phosphate hydrate
+dr:D01393	dr:Piperazine phosphate
 dr:D01394	dr:Epirizole
 dr:D01395	dr:Actarit
 dr:D01396	dr:Pyridinol carbamate
@@ -21668,7 +21698,7 @@ dr:D03027	dr:Azanator maleate
 dr:D03028	dr:Azanidazole
 dr:D03029	dr:Azaribine
 dr:D03030	dr:Azarole
-dr:D03031	dr:1-
+dr:D03031	dr:1-(4-Methylphenyl)ethyl nicotinate
 dr:D03032	dr:Azaserine
 dr:D03033	dr:Azathioprine sodium
 dr:D03034	dr:Azelaic acid
@@ -22999,7 +23029,7 @@ dr:D04378	dr:Guancydine
 dr:D04379	dr:Propantheline bromide, sodium copper chlorophyllin and magnesium silicate
 dr:D04380	dr:Dried yeast
 dr:D04381	dr:Nux vomica
-dr:D04382	dr:Guanethidine sulfate
+dr:D04382	dr:Guanethidine monosulfate
 dr:D04383	dr:Condurango fluidextract
 dr:D04384	dr:Guanisoquin sulfate
 dr:D04385	dr:Swertia herb
@@ -23086,7 +23116,7 @@ dr:D04474	dr:Hydroxyethyl cellulose
 dr:D04475	dr:Insulin aspart
 dr:D04476	dr:Hydroxyphenamate
 dr:D04477	dr:Insulin lispro
-dr:D04478	dr:Hydroxypropylcellulose
+dr:D04478	dr:Hydroxypropyl cellulose
 dr:D04479	dr:Hyoscyamine hydrobromide
 dr:D04480	dr:L-Glutamic acid, L-alanine and glycine
 dr:D04481	dr:Hypromellose
@@ -23190,7 +23220,7 @@ dr:D04579	dr:Iomethin I 125
 dr:D04580	dr:Iomethin I 131
 dr:D04581	dr:Iometopane I 123
 dr:D04582	dr:Iopentol
-dr:D04583	dr:Iophendylate
+dr:D04583	dr:Iofendylate
 dr:D04584	dr:Ioprocemic acid
 dr:D04585	dr:Iopronic acid
 dr:D04586	dr:Iopydol
@@ -24303,7 +24333,7 @@ dr:D05719	dr:Resocortol butyrate
 dr:D05720	dr:Retapamulin
 dr:D05721	dr:Reteplase
 dr:D05722	dr:Revaprazan hydrochloride
-dr:D05723	dr:Rho
+dr:D05723	dr:Rho(D) immune globulin
 dr:D05724	dr:Ribaminol
 dr:D05725	dr:Riboflavin 5'-phosphate sodium
 dr:D05726	dr:Riboprine
@@ -25033,7 +25063,7 @@ dr:D06498	dr:Concentrated human blood platelet
 dr:D06499	dr:Opium tincture
 dr:D06500	dr:Orange peel tincture
 dr:D06501	dr:Orange peel syrup
-dr:D06502	dr:Polyoxyethylene
+dr:D06502	dr:Polyoxyethylene (160) polyoxypropylene (30) glycol
 dr:D06503	dr:Pemetrexed sodium hydrate
 dr:D06504	dr:Rabies vaccine
 dr:D06505	dr:Starch, topical
@@ -26835,7 +26865,7 @@ dr:D08410	dr:Pravastatin
 dr:D08411	dr:Prazosin
 dr:D08412	dr:Prednisolone pivalate
 dr:D08413	dr:Prednisolone sodium metazoate
-dr:D08414	dr:Prednisolone 21-
+dr:D08414	dr:Prednisolone 21-(sodium tetrahydrophthalate)
 dr:D08415	dr:Prednisolone steaglate
 dr:D08416	dr:Prednisone acetate
 dr:D08417	dr:Prenoxdiazine hydrochloride
@@ -26925,7 +26955,7 @@ dr:D08500	dr:Saccharin sodium
 dr:D08501	dr:Trolamine salicylate
 dr:D08502	dr:Salinomycin
 dr:D08503	dr:Toceranib
-dr:D08504	dr:Samarium
+dr:D08504	dr:Samarium Sm 153 lexidronam
 dr:D08505	dr:Sapropterin
 dr:D08506	dr:Sarafloxacin
 dr:D08507	dr:Sarmazenil
@@ -27128,7 +27158,7 @@ dr:D08704	dr:Magnesium aluminometasilicate, methylmethionine sulfonium chloride,
 dr:D08705	dr:Digestive enzyme derived from aspergillus
 dr:D08706	dr:l-Menthol, cinnamon bark, gentian, zanthoxylum fruit, ginger and sodium bicarbonate
 dr:D08707	dr:l-Menthol, gentian, scopolia extract powder and sodium bicarbonate
-dr:D08708	dr:Licase
+dr:D08708	dr:Licase (alpha Amylase), aluminum hydroxide, dried, magnesium carbonate, sodium bicarbonate and precipitated calcium carbonate
 dr:D08709	dr:Picrasma wood and sodium bicarbonate
 dr:D08710	dr:Sulfur, fennel, glycyrrhiza and senna leaf
 dr:D08711	dr:Coptis rhizome, senna leaf, rhubarb, magnesium oxide and magnesium sulfate hydrate
@@ -27176,16 +27206,16 @@ dr:D08753	dr:Bromelains and trypsin, crystallized
 dr:D08754	dr:L-Arginine and L-arginine hydrochloride
 dr:D08755	dr:Coriolus versicolor polysaccharide
 dr:D08756	dr:Picibanil
-dr:D08757	dr:[N,N'-ethylenedi-L-cysteinate
-dr:D08758	dr:Technetium
+dr:D08757	dr:[N,N'-ethylenedi-L-cysteinate (3-)] oxotechnetium (99mTc) diethylester
+dr:D08758	dr:Technetium (99mTc) N-pyridoxyl-5-methyltryptophan
 dr:D08759	dr:Galactosyl human serum albumin diethylenetriamine pentaacetic acid technetium
 dr:D08760	dr:Diethylenetriamine pentaacetic acid and diethylenetriamine pentaacetic acid technetium
-dr:D08761	dr:Sodium pertechnetate
-dr:D08762	dr:Technetium
-dr:D08763	dr:99mTc-MIBI and tetrakis
-dr:D08764	dr:Technetium
-dr:D08765	dr:Sodium pyrophosphate hydrate and technetium
-dr:D08766	dr:Phytate sodium hydrate and technetium
+dr:D08761	dr:Sodium pertechnetate (99mTc) and stannous chloride, anhydrous
+dr:D08762	dr:Technetium (99mTc) labelled macroaggregated human serum albumin
+dr:D08763	dr:99mTc-MIBI and tetrakis (2-methosyisobutykisonitrile) copper (I) tetrafluoroboric acid
+dr:D08764	dr:Technetium (99mTc) hydroxymethylene diphosphonate
+dr:D08765	dr:Sodium pyrophosphate hydrate and technetium (99mTc) pyrophosphate
+dr:D08766	dr:Phytate sodium hydrate and technetium (99mTc) phytic acid
 dr:D08767	dr:Benzoylmercaptoacetylglycylglycylglycine and mercaptoacetylglycylglycylglycine technetium
 dr:D08768	dr:Promethazine hibenzate
 dr:D08769	dr:Diphenhydramine hydrochloride and calcium bromide
@@ -27207,7 +27237,7 @@ dr:D08785	dr:Freeze-dried ion-exchange-resin treated human normal immunoglobulin
 dr:D08786	dr:Freeze-dried sulfonated human normal immunoglobulin
 dr:D08787	dr:Freeze-dried pepsin treated human normal immunoglobulin
 dr:D08788	dr:Freeze-dried polyethylene glycol treated human normal immunoglobulin
-dr:D08789	dr:Freeze-dried human anti-D
+dr:D08789	dr:Freeze-dried human anti-D (Rho) immunoglobulin
 dr:D08790	dr:Freeze-dried human anti-HBs immunoglobulin
 dr:D08791	dr:Freeze-dried human anti-tetanus immunoglobulin
 dr:D08792	dr:Freeze-dried human fibrinogen
@@ -27754,7 +27784,7 @@ dr:D09628	dr:Imagabalin hydrochloride
 dr:D09629	dr:Imetelstat
 dr:D09630	dr:Imetelstat sodium
 dr:D09631	dr:Intetumumab
-dr:D09632	dr:Iodine
+dr:D09632	dr:Iodine I 124 girentuximab
 dr:D09633	dr:Lebrikizumab
 dr:D09634	dr:Lersivirine
 dr:D09635	dr:Linifanib
@@ -28306,7 +28336,7 @@ dr:D10190	dr:Tivozanib hydrochloride
 dr:D10191	dr:Safinamide mesylate
 dr:D10192	dr:Recombinant adsorbed quadrivalent human papillomavirus virus-like particle vaccine
 dr:D10193	dr:Live attenuated human rota virus vaccine, oral
-dr:D10194	dr:Remimazolam besilate
+dr:D10194	dr:Remimazolam besylate
 dr:D10195	dr:Luseogliflozin hydrate
 dr:D10196	dr:Ipragliflozin
 dr:D10197	dr:Profluthrin
@@ -28435,8 +28465,8 @@ dr:D10320	dr:Placulumab
 dr:D10321	dr:Quisinostat
 dr:D10322	dr:Quisinostat hydrochloride
 dr:D10323	dr:Rilimogene glafolivec
-dr:D10324	dr:Saridegib
-dr:D10325	dr:Saridegib hydrochloride
+dr:D10324	dr:Patidegib
+dr:D10325	dr:Patidegib hydrochloride
 dr:D10326	dr:Setipiprant
 dr:D10327	dr:Tirasemtiv
 dr:D10328	dr:Vocimagene amiretrorepvec
@@ -28508,7 +28538,7 @@ dr:D10394	dr:Deldeprevir sodium
 dr:D10395	dr:Nesvacumab
 dr:D10396	dr:Nintedanib esylate
 dr:D10397	dr:Rabusertib
-dr:D10398	dr:Radium-223 dichloride
+dr:D10398	dr:Radium Ra 223 dichloride
 dr:D10399	dr:Rebastinib Tosylate
 dr:D10400	dr:Tildrakizumab
 dr:D10401	dr:Trenonacog alfa
@@ -28937,7 +28967,7 @@ dr:D10824	dr:Clopidogrel besilate
 dr:D10825	dr:Opicapone
 dr:D10826	dr:Saxagliptin and dapagliflozin
 dr:D10827	dr:Sofosbuvir and velpatasvir
-dr:D10828	dr:Lutetium
+dr:D10828	dr:Lutetium (177Lu) chloride
 dr:D10829	dr:Rasagiline tartrate
 dr:D10830	dr:Efmoroctocog alfa
 dr:D10831	dr:Susoctocog alfa
@@ -28968,7 +28998,7 @@ dr:D10856	dr:Nomegestrol acetate and estradiol
 dr:D10857	dr:Fenofibrate and simvastatin
 dr:D10858	dr:Rociletinib
 dr:D10859	dr:Olmutinib
-dr:D10860	dr:Fluciclovine
+dr:D10860	dr:Fluciclovine F-18
 dr:D10861	dr:Adomeglivant
 dr:D10862	dr:Altiratinib
 dr:D10863	dr:Basmisanil
@@ -29170,6 +29200,7 @@ dr:D11058	dr:Adegramotide acetate
 dr:D11059	dr:Elatipepimut-S
 dr:D11060	dr:Nelatimotide trifluoroacetate
 dr:D11061	dr:Osilodrostat
+dr:D11062	dr:Osilodrostat phosphate
 dr:D11063	dr:Evocalcet
 dr:D11064	dr:Sitagliptin and ipragliflozin
 dr:D11065	dr:Fosnetupitant
@@ -29180,7 +29211,7 @@ dr:D11069	dr:Amlodipine and benazepril
 dr:D11070	dr:Tirabrutinib hydrochloride
 dr:D11071	dr:Dotinurad
 dr:D11072	dr:Siponimod fumarate
-dr:D11073	dr:Tepotinib hydrochloride hydrate
+dr:D11073	dr:Tepotinib hydrochloride
 dr:D11074	dr:Ipatasertib hydrochloride
 dr:D11075	dr:Chlorpheniramine and hydrocodone
 dr:D11076	dr:Homatropine meylbromide and hydrocodone
@@ -29492,7 +29523,7 @@ dr:D11382	dr:Darunavir, cobicistat, emtricitabine and tenofovir alafenamide
 dr:D11383	dr:Blarcamesine
 dr:D11384	dr:Hydromethylthionine mesylate
 dr:D11385	dr:Inarigivir soproxil
-dr:D11386	dr:Tisagenlecleucel
+dr:D11386	dr:Tisagenlecleucel-T
 dr:D11387	dr:Memantine and donepezil
 dr:D11388	dr:Nebivolol and valsartan
 dr:D11389	dr:Dutasteride and tamsulosin
@@ -29790,8 +29821,8 @@ dr:D11684	dr:Verdiperstat
 dr:D11685	dr:Pegunigalsidase alfa
 dr:D11686	dr:Plamotamab
 dr:D11687	dr:Semorinemab
-dr:D11688	dr:Ampreloxetin
-dr:D11689	dr:Ampreloxetin hydrochloride
+dr:D11688	dr:Ampreloxetine
+dr:D11689	dr:Ampreloxetine hydrochloride
 dr:D11690	dr:Umibecestat
 dr:D11691	dr:Tirbanibulin
 dr:D11692	dr:Tirbanibulin mesylate
@@ -29814,6 +29845,113 @@ dr:D11708	dr:Givosiran sodium
 dr:D11709	dr:Ascrinvacumab
 dr:D11710	dr:Phentermine and topiramate
 dr:D11711	dr:Dapagliflozin, metformin and saxagliptin
+dr:D11712	dr:Pralsetinib
+dr:D11713	dr:Selpercatinib
+dr:D11714	dr:Vocacapsaicin
+dr:D11715	dr:Vocacapsaicin hydrochloride
+dr:D11716	dr:Odevixibat
+dr:D11717	dr:Tepotinib
+dr:D11718	dr:Taniborbactam
+dr:D11719	dr:Taniborbactam hydrochloride
+dr:D11720	dr:Acalabrutinib maleate
+dr:D11721	dr:Rovafovir etalafenamide
+dr:D11722	dr:Rovafovir etalafenamide citrate
+dr:D11723	dr:Levamlodipine maleate
+dr:D11724	dr:Galicaftor
+dr:D11725	dr:Futibatinib
+dr:D11726	dr:Zoliflodacin
+dr:D11727	dr:Voxtalisib
+dr:D11728	dr:Tradipitant
+dr:D11729	dr:Nerinetide
+dr:D11730	dr:Nerinetide acetate
+dr:D11731	dr:Nerinetide hydrochloride
+dr:D11732	dr:Dubermatinib
+dr:D11733	dr:Dubermatinib tartrate
+dr:D11734	dr:Aldafermin
+dr:D11735	dr:Fanotaprim
+dr:D11736	dr:Rintodestrant
+dr:D11737	dr:Fisogatinib
+dr:D11738	dr:Telaglenastat
+dr:D11739	dr:Telaglenastat hydrochloride
+dr:D11740	dr:Roducitabine
+dr:D11741	dr:Lazucirnon
+dr:D11742	dr:Lazucirnon hydrochloride
+dr:D11743	dr:Ensifentrine
+dr:D11744	dr:Avalglucosidase alfa
+dr:D11745	dr:Cantharidin
+dr:D11746	dr:Eftozanermin alfa
+dr:D11747	dr:Inbakicept
+dr:D11748	dr:Avacincaptad pegol sodium
+dr:D11749	dr:Cinhyaluronate sodium
+dr:D11750	dr:Duligotuzumab
+dr:D11751	dr:Dusquetide
+dr:D11752	dr:Enoblituzumab
+dr:D11753	dr:Evinacumab
+dr:D11754	dr:Filanesib
+dr:D11755	dr:Filanesib hydrochloride
+dr:D11756	dr:Fletikumab
+dr:D11757	dr:Inebilizumab
+dr:D11758	dr:Ipafricept
+dr:D11759	dr:Isunakinra
+dr:D11760	dr:Lexanopadol
+dr:D11761	dr:Ligelizumab
+dr:D11762	dr:Lucitanib
+dr:D11763	dr:Merestinib
+dr:D11764	dr:Necuparanib
+dr:D11765	dr:Necuparanib sodium
+dr:D11766	dr:Onalespib lactate
+dr:D11767	dr:Opicinumab
+dr:D11768	dr:Pacritinib
+dr:D11769	dr:Asenapine
+dr:D11770	dr:Vonapanitase
+dr:D11771	dr:Tezepelumab
+dr:D11772	dr:Tesevatinib
+dr:D11773	dr:Tesevatinib tosylate
+dr:D11774	dr:Taselisib
+dr:D11775	dr:Tarextumab
+dr:D11776	dr:Sparsentan
+dr:D11777	dr:Seribantumab
+dr:D11778	dr:Daxdilimab
+dr:D11779	dr:Fosdenopterin
+dr:D11780	dr:Fosdenopterin hydrobromide
+dr:D11781	dr:Dirocaftor
+dr:D11782	dr:Encequidar
+dr:D11783	dr:Encequidar mesylate
+dr:D11784	dr:Vonoprazan
+dr:D11785	dr:Oteseconazole
+dr:D11786	dr:Vodobatinib
+dr:D11787	dr:Ceralasertib
+dr:D11788	dr:Remimazolam
+dr:D11789	dr:Mivavotinib
+dr:D11790	dr:Mivavotinib citrate
+dr:D11791	dr:Ibezapolstat
+dr:D11792	dr:Numidargistat
+dr:D11793	dr:Zuranolone
+dr:D11794	dr:Bempedoic acid and ezetimibe
+dr:D11795	dr:Vibostolimab
+dr:D11796	dr:Melrilimab
+dr:D11797	dr:Apitegromab
+dr:D11798	dr:Cipaglucosidase alfa
+dr:D11799	dr:Bentracimab
+dr:D11800	dr:Vixarelimab
+dr:D11801	dr:Omodenbamab
+dr:D11802	dr:Milvexian
+dr:D11803	dr:Cetuximab sarotalocan
+dr:D11804	dr:Aspirin and vonoprazan
+dr:D11805	dr:Cetuximab sarotalocan sodium
+dr:D11806	dr:Berotralstat hydrochloride hydrate
+dr:D11807	dr:Imeglimin hydrochloride
+dr:D11808	dr:Ferric derisomaltose
+dr:D11809	dr:Omecamtiv mecarbil hydrochloride hydrate
+dr:D11810	dr:Fitusiran sodium
+dr:D11811	dr:Tofersen
+dr:D11812	dr:Pabinafusp alfa
+dr:D11813	dr:Tisotumab
+dr:D11814	dr:Tisotumab vedotin
+dr:D11815	dr:Belumosudil
+dr:D11816	dr:Belumosudil mesylate
+dr:D11817	dr:Deucravacitinib
+dr:D11818	dr:Ethyl butylacetylaminopropionate
 gl:G00001	gl:N-Acetyl-D-glucosaminyldiphosphodolichol
 gl:G00002	gl:N,N'-Chitobiosyldiphosphodolichol
 gl:G00003	gl:(GlcNAc)2 (Man)1 (PP-Dol)1
@@ -29992,7 +30130,7 @@ gl:G00190	gl:Disialosyl Lc4Cer
 gl:G00192	gl:(Gal)5 (Glc)1 (GlcNAc)4 (LFuc)2 (Neu5Ac)1 (Cer)1
 gl:G00193	gl:(Gal)6 (Glc)1 (GlcNAc)5 (LFuc)2 (Neu5Ac)1 (Cer)1
 gl:G00194	gl:(Gal)6 (Glc)1 (GlcNAc)5 (LFuc)2 (Neu5Ac)1 (Cer)1
-gl:G00195	gl:(Gal)3 (Glc)1 (GlcNAc)2 (LFuc)2 (Neu5Ac)1 (Cer)1
+gl:G00195	gl:VI3NeuAcIII3V3Fuc2nLc6
 gl:G00196	gl:VIII3NeuAcV3Fuc-nLc8Cer
 gl:G00197	gl:X3NeuAcVII3Fuc-nLc10Cer
 gl:G00198	gl:(Gal)1 (GlcNAc)2 (Man)4 (Neu5Ac)1
@@ -39451,7 +39589,6 @@ gl:G11449	gl:(Gal)3 (Glc)2 (Lgro-manHep)4 (gro-manHep)1
 gl:G11452	gl:(Gal)1 (Glc)2 (LRha)4 (*)2
 gl:G11453	gl:(GalNAc)2 (GlcNAc)4 (LFuc)1 (Man)3 (Neu5Ac)2 (Asn)1
 gl:G11454	gl:(GlcNAc)1 (Man)3 (*)2
-gl:G11455	gl:E. coli O44 polysaccharide repeating unit
 gl:G11457	gl:(GlcNAc)1 (LFucNAc)1 (Lgro-L3,9dmanNon-2-ulop5NAc7NAc-onic)1 (*)2
 gl:G11458	gl:(GlcA)1 (GlcNAc)1 (LFucNAc)1 (*)2
 gl:G11459	gl:O8
@@ -39462,7 +39599,7 @@ gl:G11464	gl:(Gal)1 (GalA)1 (LRha)4 (*)2
 gl:G11465	gl:(LFuc)2 (*)2 (S)2
 gl:G11468	gl:(Glc)1 (GlcA)1 (LRha)3 (Man)1 (*)2
 gl:G11469	gl:(Glc)1 (Man)5 (*)2
-gl:G11470	gl:E. coli O9 polysaccharide repeating unit
+gl:G11470	gl:Escherichia coli O9 O-antigen
 gl:G11471	gl:(Gal)1 (GalNAc)1 (GalNAc6Ac)1 (Glc)2 (*)2
 gl:G11472	gl:(Gal)1 (GalNAc)2 (Glc)1 (*)2
 gl:G11473	gl:(Glc)1 (GlcA)2 (GlcNAc6Ac)1 (*)2
@@ -39747,7 +39884,6 @@ gl:G11835	gl:(Gal)3 (Glc)1 (GlcA)1 (Man)1 (*)2
 gl:G11836	gl:(Gal)1 (GalNAc)1 (GlcA4Ac)1 (GlcNAc)1 (*)2
 gl:G11837	gl:(Galf)1 (GlcN)1 (Man)2 (Ino-P)1
 gl:G11838	gl:(Gal)1 (Galf)1 (*)2
-gl:G11839	gl:E. coli O18A polysaccharide repeating unit
 gl:G11840	gl:(GlcNAc)1 (LRha)3 (*)2
 gl:G11841	gl:(Gal)2 (Galf)1 (*)2
 gl:G11842	gl:(GalNAc)1 (Ribf)1 (*)2
@@ -40182,7 +40318,7 @@ gl:G12292	gl:(Gal)2 (GlcNAc)2 (LFuc)1
 gl:G12293	gl:(Gal)1 (Glc)1 (Neu5Gc)1 (NeuGc)1 (Cer)1
 gl:G12294	gl:(Glc)1 (LRha)4
 gl:G12295	gl:(Fruf)4 (Glc)1
-gl:G12297	gl:(Gal)1 (GlcNAc)1 (LFuc)1 (Neu5Ac)1 (S)1
+gl:G12297	gl:6-sulfo-sialyl Lewis x
 gl:G12298	gl:(Gal)1 (Glc)1 (Neu5Ac)3
 gl:G12299	gl:(3,6-Anhydro-LGal)1 (Gal)2 (LGal)1 (S)1
 gl:G12300	gl:(Fruf)4 (Glc)1
@@ -40494,7 +40630,7 @@ gl:G12691	gl:(Gal)2 (GalNAc)1 (Neu5AcAc)1 (*)2
 gl:G12692	gl:(Gal)1 (GalNAc)1 (Ser)1
 gl:G12693	gl:(Gal)2 (GalNAc)1 (GlcNAc)1 (Ser)1
 gl:G12697	gl:(Gal)4 (GlcA)1 (LRha)1 (Man)1 (*)2
-gl:G12698	gl:E. coli O78 polysaccharide repeating unit
+gl:G12698	gl:Escherichia coli O78 O-antigen
 gl:G12700	gl:(Gal)4 (Glc)1 (GlcA)1 (*)2
 gl:G12701	gl:(Gal)3 (Glc)1 (GlcA)1 (*)2
 gl:G12702	gl:(GlcNAc)2 (Man)2 (PP-Dol)1
@@ -40648,7 +40784,7 @@ gl:G12888	gl:(Apif)2 (Dha)1 (Gal)2 (GalA)9 (GlcA)1 (Kdo)1 (LAcefA)1 (LAra)2 (LAr
 gl:G12889	gl:(Apif)2 (Dha)1 (Gal)1 (GalA)9 (GlcA)1 (Kdo)1 (LAceA)1 (LAra)1 (LAraf)1 (LFuc)1 (LFuc2Me)1 (LGal)1 (LRha)4 (Xyl2Me)1 (*)2
 gl:G12890	gl:(Gal)5 (Glc)1 (GlcNAc)4 (LFuc)1
 gl:G12904	gl:(Gal)1 (GalNAc)2 (Glc)4 (GlcA)1 (*)2
-gl:G12905	gl:O152
+gl:G12905	gl:Escherichia coli O152 O-antigen
 gl:G12908	gl:(Gal)2 (Glc)2 (Kdo)1 (Lgro-manHep)4 (LipidA)1 (PCho)2 (PPEtn)1
 gl:G12909	gl:(Gal)2 (Glc)1 (Kdo)2 (Lgro-manHep)4 (LipidA)1 (PCho)2
 gl:G12910	gl:(Gal)1 (GalA)1 (GlcNAc)1 (Pse5Ac7Ac)1 (QuiNAc)1 (*)2
@@ -40671,32 +40807,32 @@ gl:G12931	gl:(Glc)1 (GlcNAc)1 (LFucNAc)1 (LRha)1 (*)2
 gl:G12932	gl:(Gal)1 (GalNAc)1 (Qui3NAc)1 (Ribf)1 (*)2
 gl:G12933	gl:O6
 gl:G12934	gl:O6
-gl:G12936	gl:(Gal)1 (GlcNAc)1 (LRha)1 (Man)1 (Qui4NAc)1 (*)2
+gl:G12936	gl:Escherichia coli O7 O-antigen
 gl:G12937	gl:(Man)3 (*)2
 gl:G12938	gl:(Gal)1 (GalNAc)1 (GalNAc3Ac)1 (Glc)1 (GlcA)1 (*)2
 gl:G12939	gl:(Gal)1 (GalNAc)1 (Glc)2 (GlcNAc)2 (*)2
 gl:G12940	gl:(GalNAc)1 (Glc)2 (Neu5Ac)1 (*)2
 gl:G12941	gl:(Glc)2 (GlcNAc)1 (LFucNAc)1 (LRha)1 (*)2
-gl:G12942	gl:E. coli O26 polysaccharide repeating unit
+gl:G12942	gl:Escherichia coli O26 O-antigen
 gl:G12943	gl:(GalNAcAN)1 (GlcNAc)1 (LRha)4 (*)2
-gl:G12944	gl:(Glc)1 (GlcNAc)1 (Man)3 (*)2
+gl:G12944	gl:Escherichia coli O44 O-antigen
 gl:G12945	gl:(FucNAc)1 (Glc)1 (L6dTal2Ac)1 (*)2
 gl:G12946	gl:(Glc)1 (GlcNAc)1 (L6dTal2Ac)1 (*)2
 gl:G12947	gl:(6dmanHep2Ac)1 (Fucf)1 (*)2
-gl:G12948	gl:O55
+gl:G12948	gl:Escherichia coli O55 O-antigen
 gl:G12949	gl:(Gal)1 (Glc)1 (GlcNAc)1 (Neu5Ac)1 (*)2
-gl:G12950	gl:(Gal)2 (GalNAc)1 (Neu5Ac7Ac9Ac)1 (*)2
+gl:G12950	gl:Escherichia coli O104 O-antigen
 gl:G12951	gl:(GlcA2Ac3Ac)1 (GlcNAc6Ac)1 (LRha)2 (LRha4Ac)1 (Ribf)1 (*)2
-gl:G12952	gl:E. coli O111 polysaccharide repeating unit
-gl:G12953	gl:(Man)4 (*)2
-gl:G12954	gl:(Galf)1 (Glc)2 (GlcNAc)1 (LRha2Ac)1 (*)2
+gl:G12952	gl:Escherichia coli O111 O-antigen
+gl:G12953	gl:Escherichia coli O9a O-antigen
+gl:G12954	gl:Escherichia coli O16 O-antigen
 gl:G12955	gl:(Galf)1 (Glc)1 (GlcNAc)1 (LRha2Ac)1 (*)2
 gl:G12956	gl:(Galf)1 (Glc)1 (GlcNAc)1 (LRha)1 (*)2
-gl:G12957	gl:E. coli O17 polysaccharide repeating unit
-gl:G12958	gl:(Gal)1 (Glc)2 (GlcNAc)2 (LRha)1 (*)2
-gl:G12959	gl:(Gal)1 (Glc)1 (GlcNAc)2 (LRha)1 (*)2
-gl:G12960	gl:(Gal)1 (Glc)3 (GlcNAc)1 (LRha)1 (*)2
-gl:G12961	gl:(Gal)1 (Glc)2 (GlcNAc)1 (LRha)1 (*)2
+gl:G12957	gl:Escherichia coli O17 O-antigen
+gl:G12958	gl:Escherichia coli O18A1 O-antigen
+gl:G12959	gl:Escherichia coli O18A O-antigen
+gl:G12960	gl:Escherichia coli O18B1 O-antigen
+gl:G12961	gl:Escherichia coli O18B O-antigen
 gl:G12962	gl:(Gal)1 (Ribf)1 (*)2
 gl:G12963	gl:O21
 gl:G12964	gl:(Gal)2 (GlcA)1 (GlcNAc)1 (ManNAc)1 (*)2
@@ -40705,7 +40841,7 @@ gl:G12966	gl:(Glc3Ac)1 (GlcNAc)2 (L6dTal)1 (Man)1 (*)2
 gl:G12967	gl:(Gal)1 (GlcNAc)1 (LRha)2 (*)2
 gl:G12968	gl:(Gal)2 (GlcNAc)1 (LRha)1 (Man)1 (*)2
 gl:G12969	gl:(GlcNAc)1 (Man)3 (*)2
-gl:G12971	gl:(Gal)2 (Glc)1 (GlcA)1 (GlcNAc)1 (*)2
+gl:G12971	gl:Escherichia coli O83 O-antigen
 gl:G12972	gl:(GlcN)1 (Man)4 (EtN)2 (P)2 (protein)1 (Ino-P)1
 gl:G12973	gl:(GlcNAc)1 (L6dTal)1 (Man)2 (*)2
 gl:G12976	gl:O116
@@ -40714,7 +40850,7 @@ gl:G12978	gl:O119
 gl:G12979	gl:(GalANAc)1 (GalANAc6N)1 (GlcNAc)1 (Qui4NAcGly)1 (*)2
 gl:G12980	gl:O125
 gl:G12981	gl:O126
-gl:G12982	gl:E. coli O127 polysaccharide repeating unit
+gl:G12982	gl:Escherichia coli O127 O-antigen
 gl:G12983	gl:O128
 gl:G12984	gl:O136
 gl:G12985	gl:(GalANAc)1 (GlcNAc)1 (LRha)2 (*)2
@@ -40723,7 +40859,7 @@ gl:G12987	gl:(GlcA)1 (GlcNAc)1 (LRha)1 (Man)1 (Man6Ac)1 (*)2
 gl:G12988	gl:O142
 gl:G12989	gl:(GalA)1 (GalNAc)1 (LRha)2 (*)2
 gl:G12990	gl:(Gal)2 (GlcNAc)2 (Ribf)1 (*)2
-gl:G12991	gl:O157
+gl:G12991	gl:Escherichia coli O157 O-antigen
 gl:G12992	gl:O158
 gl:G12993	gl:O159
 gl:G12994	gl:(Gal)1 (GalNAc)1 (Galf)1 (Glc)2 (*)2
@@ -40739,7 +40875,7 @@ gl:G13003	gl:(Gal)1 (GalNAc)2 (LFuc)1 (*)2
 gl:G13004	gl:(Gal)1 (GlcA6NGly)1 (GlcNAc)2 (Qui3NAcyl)1 (*)2
 gl:G13007	gl:(LRha)2 (Xulf)2 (*)2
 gl:G13008	gl:(GalANAc)1 (GlcNAc)1 (QuiNAc)2 (*)2
-gl:G13010	gl:E. coli O145 polysaccharide repeating unit
+gl:G13010	gl:Escherichia coli O145 O-antigen
 gl:G13011	gl:O149
 gl:G13012	gl:(Glc)1 (Glc6Ac)1 (GlcNAc)1 (LFucNAc)2 (*)2 (P)1
 gl:G13013	gl:O173
@@ -40748,7 +40884,6 @@ gl:G13015	gl:Glucopsychosine
 gl:G13016	gl:O164
 gl:G13017	gl:O7
 gl:G13019	gl:O171
-gl:G13020	gl:O18ac
 gl:G13021	gl:(Gal)2 (Glc)1 (GlcNAc)1 (Neu5Ac)1 (Cer)1
 gl:G13022	gl:Dermatan sulfate
 gl:G13023	gl:(Gal)1 (GalNAc)2 (GlcNAc)1 (Ser/Thr)1
@@ -40797,12 +40932,10 @@ gl:G13065	gl:Polysialic acid (PSA)
 gl:G13066	gl:Bisecting GlcNAc
 gl:G13067	gl:Core fucose of N-glycan
 gl:G13068	gl:(Gal)1 (Glc)1 (Neu5Ac)1
-gl:G13069	gl:sialyl Lewis X-i antigen
 gl:G13070	gl:Fucosylated AFP
 gl:G13071	gl:Forssman antigen
 gl:G13073	gl:(Gal)1 (GlcNAc)2 (S)2
 gl:G13074	gl:(Gal)1 (GlcNAc)2 (S)1
-gl:G13076	gl:6-sulfo-sialyl Lewis x
 gl:G13077	gl:HNK-1 epitope
 gl:G13078	gl:Lactosamines
 gl:G13079	gl:alpha2-6 sialylated lactosamines
@@ -40854,3 +40987,7 @@ gl:G13124	gl:(Araf)1 (Galf)12 (GlcNAc)1 (LRha)1 (PP-C50)1
 gl:G13125	gl:UDP-alpha-D-galactofuranose
 gl:G13128	gl:(GlcN)1 (Ino(acyl)-P)1 (Man)2
 gl:G13129	gl:Glucuronylated core 1 glycans (linear)
+gl:G13136	gl:Escherichia coli O18A1A2 O-antigen
+gl:G13139	gl:Escherichia coli O103 O-antigen
+gl:G13141	gl:Escherichia coli O123 O-antigen
+gl:G13143	gl:Escherichia coli O81 O-antigen
