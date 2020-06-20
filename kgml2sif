@@ -121,6 +121,10 @@ nodeTypes=[
     "compound",
     "group"
 ]
+componentTypes=[
+    "gene",
+    "compound"
+]
 relationTypes=[
     "PPrel",
     "GErel",
@@ -308,6 +312,10 @@ for kgmlFile in args.kgmlFile:
                     break
                 elif componentID not in nodes.keys():
                     warns.append("group: "+ID+": "+componentID+": unknown component, skipping")
+                    ok=False
+                    break
+                elif nodes[componentID]["type"] not in componentTypes:
+                    warns.append("group: "+ID+": "+componentID+": "+nodes[componentID]["type"]+": invalid component type, skipping")
                     ok=False
                     break
                 elif componentID not in componentIDs:
