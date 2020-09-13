@@ -10,9 +10,9 @@
         <graphics name="TSC1, LAM, TSC" fgcolor="#000000" bgcolor="#BFFFBF"
              type="rectangle" x="616" y="492" width="46" height="17"/>
     </entry>
-    <entry id="8" name="hsa:27124 hsa:3632 hsa:51763" type="gene"
-        link="https://www.kegg.jp/dbget-bin/www_bget?hsa:27124+hsa:3632+hsa:51763">
-        <graphics name="INPP5J, INPP5, PIB5PA, PIPP..." fgcolor="#000000" bgcolor="#BFFFBF"
+    <entry id="8" name="hsa:3632" type="gene"
+        link="https://www.kegg.jp/dbget-bin/www_bget?hsa:3632">
+        <graphics name="INPP5A, 5PTASE" fgcolor="#000000" bgcolor="#BFFFBF"
              type="rectangle" x="334" y="241" width="46" height="17"/>
     </entry>
     <entry id="9" name="hsa:3636" type="gene"
@@ -82,7 +82,7 @@
     </entry>
     <entry id="22" name="hsa:3630" type="gene"
         link="https://www.kegg.jp/dbget-bin/www_bget?hsa:3630">
-        <graphics name="INS, IDDM, IDDM1, IDDM2, ILPR, IRDN, MODY10" fgcolor="#000000" bgcolor="#BFFFBF"
+        <graphics name="INS, IDDM, IDDM1, IDDM2, ILPR, IRDN, MODY10, PNDM4" fgcolor="#000000" bgcolor="#BFFFBF"
              type="rectangle" x="64" y="408" width="46" height="17"/>
     </entry>
     <entry id="23" name="cpd:C00031" type="compound"
@@ -287,7 +287,7 @@
     </entry>
     <entry id="63" name="hsa:2645 hsa:3098 hsa:3099 hsa:3101 hsa:80201" type="gene"
         link="https://www.kegg.jp/dbget-bin/www_bget?hsa:2645+hsa:3098+hsa:3099+hsa:3101+hsa:80201">
-        <graphics name="GCK, FGQTL3, GK, GLK, HHF3, HK4, HKIV, HXKP, LGLK, MODY2..." fgcolor="#000000" bgcolor="#BFFFBF"
+        <graphics name="GCK, FGQTL3, GK, GLK, HHF3, HK4, HKIV, HXKP, LGLK, MODY2, PNDM1..." fgcolor="#000000" bgcolor="#BFFFBF"
              type="rectangle" x="956" y="271" width="46" height="17"/>
     </entry>
     <entry id="64" name="hsa:1398 hsa:1399" type="gene"

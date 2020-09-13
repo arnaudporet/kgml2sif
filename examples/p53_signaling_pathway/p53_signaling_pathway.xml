@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE pathway SYSTEM "https://www.kegg.jp/kegg/xml/KGML_v0.7.2_.dtd">
-<!-- Creation date: Jun 5, 2018 16:25:12 +0900 (GMT+9) -->
+<!-- Creation date: Jun 4, 2020 16:01:43 +0900 (GMT+9) -->
 <pathway name="path:hsa04115" org="hsa" number="04115"
          title="p53 signaling pathway"
          image="https://www.kegg.jp/kegg/pathway/hsa/hsa04115.png"
@@ -22,7 +22,7 @@
     </entry>
     <entry id="6" name="hsa:4194" type="gene"
         link="https://www.kegg.jp/dbget-bin/www_bget?hsa:4194">
-        <graphics name="MDM4, HDMX, MDMX, MRP1" fgcolor="#000000" bgcolor="#BFFFBF"
+        <graphics name="MDM4, BMFS6, HDMX, MDMX, MRP1" fgcolor="#000000" bgcolor="#BFFFBF"
              type="rectangle" x="305" y="482" width="46" height="17"/>
     </entry>
     <entry id="7" name="hsa:1111" type="gene"
@@ -97,7 +97,7 @@
     </entry>
     <entry id="21" name="hsa:64326" type="gene"
         link="https://www.kegg.jp/dbget-bin/www_bget?hsa:64326">
-        <graphics name="COP1, RFWD2, RNF200" fgcolor="#000000" bgcolor="#BFFFBF"
+        <graphics name="COP1, CFAP78, FAP78, RFWD2, RNF200" fgcolor="#000000" bgcolor="#BFFFBF"
              type="rectangle" x="617" y="710" width="46" height="17"/>
     </entry>
     <entry id="22" name="hsa:50484 hsa:6241" type="gene"
@@ -200,9 +200,9 @@
         <graphics name="PIDD1, LRDD, PIDD" fgcolor="#000000" bgcolor="#BFFFBF"
              type="rectangle" x="564" y="288" width="46" height="17"/>
     </entry>
-    <entry id="43" name="hsa:8795" type="gene"
-        link="https://www.kegg.jp/dbget-bin/www_bget?hsa:8795">
-        <graphics name="TNFRSF10B, CD262, DR5, KILLER, KILLER/DR5, TRAIL-R2, TRAILR2, TRICK2, TRICK2A, TRICK2B, TRICKB, ZTNFR9" fgcolor="#000000" bgcolor="#BFFFBF"
+    <entry id="43" name="hsa:8795 hsa:8797" type="gene"
+        link="https://www.kegg.jp/dbget-bin/www_bget?hsa:8795+hsa:8797">
+        <graphics name="TNFRSF10B, CD262, DR5, KILLER, KILLER/DR5, TRAIL-R2, TRAILR2, TRICK2, TRICK2A, TRICK2B, TRICKB, ZTNFR9..." fgcolor="#000000" bgcolor="#BFFFBF"
              type="rectangle" x="617" y="276" width="46" height="17"/>
     </entry>
     <entry id="44" name="hsa:841" type="gene"
@@ -232,7 +232,7 @@
     </entry>
     <entry id="49" name="hsa:4193" type="gene"
         link="https://www.kegg.jp/dbget-bin/www_bget?hsa:4193">
-        <graphics name="MDM2, ACTFS, HDMX, hdm2" fgcolor="#000000" bgcolor="#BFFFBF"
+        <graphics name="MDM2, ACTFS, HDMX, LSKB, hdm2" fgcolor="#000000" bgcolor="#BFFFBF"
              type="rectangle" x="305" y="418" width="46" height="17"/>
     </entry>
     <entry id="50" name="hsa:7157" type="gene"
@@ -242,7 +242,7 @@
     </entry>
     <entry id="51" name="hsa:4193" type="gene"
         link="https://www.kegg.jp/dbget-bin/www_bget?hsa:4193">
-        <graphics name="MDM2, ACTFS, HDMX, hdm2" fgcolor="#000000" bgcolor="#BFFFBF"
+        <graphics name="MDM2, ACTFS, HDMX, LSKB, hdm2" fgcolor="#000000" bgcolor="#BFFFBF"
              type="rectangle" x="564" y="710" width="46" height="17"/>
     </entry>
     <entry id="52" name="hsa:25898" type="gene"
@@ -347,7 +347,7 @@
     </entry>
     <entry id="154" name="hsa:84883" type="gene"
         link="https://www.kegg.jp/dbget-bin/www_bget?hsa:84883">
-        <graphics name="AIFM2, AMID, PRG3" fgcolor="#000000" bgcolor="#BFFFBF"
+        <graphics name="AIFM2, AMID, FSP1, PRG3" fgcolor="#000000" bgcolor="#BFFFBF"
              type="rectangle" x="564" y="474" width="46" height="17"/>
     </entry>
     <entry id="155" name="undefined" type="group">
